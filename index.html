@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyGuide Education Landing Page</title>
+    <meta
+      name="description"
+      content="A modern study abroad landing page built with Tailwind CSS and Font Awesome."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#eef8f6",
+                100: "#d6efea",
+                200: "#addfd4",
+                300: "#7bc8bb",
+                400: "#45aa9b",
+                500: "#23877b",
+                600: "#186c63",
+                700: "#145754",
+                800: "#123f40",
+                900: "#103436",
+              },
+              accent: {
+                50: "#fff7dd",
+                100: "#ffefb5",
+                200: "#f8db6f",
+                300: "#efc446",
+                400: "#d3a12a",
+                500: "#aa7e15",
+              },
+            },
+            fontFamily: {
+              body: ["Manrope", "sans-serif"],
+              display: ["Sora", "sans-serif"],
+            },
+            boxShadow: {
+              soft: "0 22px 60px rgba(10, 38, 39, 0.08)",
+              card: "0 22px 45px rgba(10, 38, 39, 0.16)",
+            },
+            backgroundImage: {
+              "grid-fade":
+                "radial-gradient(circle at center, rgba(255,255,255,0.14) 1px, transparent 1px)",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          @apply overflow-x-hidden bg-white font-body text-slate-800 antialiased;
+        }
+      }
+
+      @layer components {
+        .shell {
+          @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+        }
+
+        .eyebrow {
+          @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-brand-500;
+        }
+
+        .hero-pattern {
+          background-size: 16px 16px;
+        }
+
+        .section-title {
+          @apply font-display text-3xl leading-tight text-slate-900 md:text-4xl;
+        }
+
+        .primary-btn {
+          @apply inline-flex items-center gap-3 rounded-[8px] border-2 border-brand-900 bg-accent-300 px-5 py-3 text-sm font-semibold text-brand-900 transition duration-300 hover:-translate-y-0.5 hover:bg-accent-200;
+        }
+
+        .ghost-btn {
+          @apply inline-flex items-center gap-3 rounded-[8px] border border-white/40 px-5 py-3 text-sm font-semibold text-white/85 transition duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/10 hover:text-white;
+        }
+
+        .outline-btn {
+          @apply inline-flex w-fit items-center gap-3 rounded-[8px] border border-brand-800 px-5 py-3 text-sm font-semibold text-brand-800 transition hover:bg-brand-800 hover:text-white;
+        }
+
+        .icon-chip {
+          @apply inline-flex h-10 w-10 items-center justify-center bg-brand-50 text-brand-700 shadow-soft;
+        }
+
+        .service-card {
+          @apply h-full border border-slate-200 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card;
+        }
+
+        .logo-tile {
+          @apply flex items-center justify-center border border-slate-200 bg-white px-4 py-4 text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-500;
+        }
+
+        .destination-card {
+          @apply relative isolate overflow-hidden min-h-[320px] bg-brand-900 shadow-card;
+        }
+
+        .destination-card::after {
+          content: "";
+          @apply absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/35 to-transparent transition duration-500;
+        }
+
+        .testimonial-tile {
+          @apply relative overflow-hidden bg-slate-100 shadow-soft;
+        }
+
+        .form-field {
+          @apply w-full border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100;
+        }
+
+        .blog-card {
+          @apply overflow-hidden border border-slate-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card;
+        }
+
+        .footer-link {
+          @apply text-sm text-white/70 transition hover:text-accent-200;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="relative isolate overflow-hidden bg-brand-800 text-white">
+      <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50"></div>
+      <div class="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-brand-700/60 to-transparent lg:block"></div>
+
+      <header class="shell relative z-10 pt-5">
+        <nav class="flex items-center justify-between gap-6">
+          <a href="#" class="flex items-center gap-3">
+            <span
+              class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-accent-300"
+            >
+              <i class="fa-solid fa-earth-africa text-lg"></i>
+            </span>
+            <span>
+              <span class="block font-display text-lg font-semibold tracking-wide">STUDYGUIDE</span>
+              <span class="block text-[10px] uppercase tracking-[0.36em] text-white/60"
+                >Education Consult</span
+              >
+            </span>
+          </a>
+
+          <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+            <a href="#home" class="border-b border-accent-300 pb-1 text-white">Home</a>
+            <a href="#services" class="text-white/75 transition hover:text-white">About Us</a>
+            <a href="#destinations" class="text-white/75 transition hover:text-white">Destinations</a>
+            <a href="#resources" class="text-white/75 transition hover:text-white">Free Resources</a>
+            <a href="#faq" class="text-white/75 transition hover:text-white">FAQ</a>
+            <a href="#blog" class="text-white/75 transition hover:text-white">Blog</a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="#apply" class="primary-btn hidden sm:inline-flex">
+              Book A Session
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <details class="relative md:hidden">
+              <summary
+                class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-[8px] border border-white/15 bg-white/10 text-white transition hover:bg-white/15"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </summary>
+              <div class="absolute right-0 top-14 z-20 w-56 border border-white/10 bg-brand-900/95 p-5 shadow-card">
+                <div class="space-y-4 text-sm font-medium text-white/80">
+                  <a href="#home" class="block hover:text-white">Home</a>
+                  <a href="#services" class="block hover:text-white">About Us</a>
+                  <a href="#destinations" class="block hover:text-white">Destinations</a>
+                  <a href="#resources" class="block hover:text-white">Free Resources</a>
+                  <a href="#faq" class="block hover:text-white">FAQ</a>
+                  <a href="#blog" class="block hover:text-white">Blog</a>
+                  <a href="#apply" class="primary-btn mt-2 w-full justify-center">
+                    Book A Session
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                  </a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </nav>
+      </header>
+
+      <div id="home" class="shell relative z-10 pb-24 pt-16 md:pb-28 md:pt-20">
+        <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+          <div class="max-w-xl">
+            <div
+              class="mb-6 inline-flex items-center gap-2 border border-accent-300/20 bg-accent-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent-200"
+            >
+              <i class="fa-solid fa-star text-[10px]"></i>
+              Visa Processing | IELTS Prep | Admissions
+            </div>
+            <h1 class="font-display text-4xl leading-tight text-white md:text-6xl">
+              Your Global Education <span class="underline decoration-accent-300/80 underline-offset-8">StudyGuide</span>
+              Starts Here.
+            </h1>
+            <p class="mt-6 max-w-lg text-base leading-8 text-white/75 md:text-lg">
+              Expert guidance for Nigerian students ready to study in the UK, USA,
+              Canada, and beyond. We simplify the journey from application to
+              arrival so your next move feels certain.
+            </p>
+
+            <div class="mt-10 flex flex-wrap items-center gap-5">
+              <a href="#destinations" class="primary-btn">
+                Explore Destinations
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#apply" class="ghost-btn">
+                Get Free Advice
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+
+            <div class="mt-12 grid max-w-md grid-cols-2 gap-6 border-t border-white/10 pt-8">
+              <div>
+                <p class="text-3xl font-bold text-accent-200">4,000+</p>
+                <p class="mt-2 text-sm text-white/65">Applications reviewed and supported</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-accent-200">96%</p>
+                <p class="mt-2 text-sm text-white/65">Offer success rate across our top destinations</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-5 top-10 hidden h-32 w-32 border border-white/10 bg-white/5 lg:block"></div>
+            <div class="absolute -right-6 -top-6 hidden h-24 w-24 border border-accent-300/40 bg-accent-300/10 lg:block"></div>
+            <div class="relative overflow-hidden shadow-card">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                alt="International students in a hallway"
+                class="h-[540px] w-full object-cover object-center"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/10 to-transparent"></div>
+
+              <div
+                class="absolute bottom-6 left-6 max-w-xs border border-white/15 bg-brand-900/80 p-5 backdrop-blur"
+              >
+                <div class="mb-3 flex items-center gap-3">
+                  <span class="icon-chip h-9 w-9 bg-accent-300 text-brand-900 shadow-none">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </span>
+                  <div>
+                    <p class="text-sm font-semibold">Scholarship Matching</p>
+                    <p class="text-xs text-white/65">Personalized support from shortlist to visa</p>
+                  </div>
+                </div>
+                <p class="text-sm leading-6 text-white/75">
+                  One team to help you choose the right school, prepare your documents,
+                  and stay organized all the way to departure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute -bottom-px right-0 h-20 w-28 bg-white [clip-path:polygon(100%_0,0_100%,100%_100%)]"
+      ></div>
+    </section>
+
+    <main>
+      <section class="shell py-16 md:py-20">
+        <div class="text-center">
+          <p class="text-sm font-medium uppercase tracking-[0.3em] text-slate-400">
+            Trusted by 4,000+ international learners
+          </p>
+        </div>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="logo-tile">University of Leicester</div>
+          <div class="logo-tile">University of Hertfordshire</div>
+          <div class="logo-tile">Kingston University London</div>
+          <div class="logo-tile">Robert Gordon University</div>
+          <div class="logo-tile">University of Westminster</div>
+        </div>
+      </section>
+
+      <section id="services" class="shell py-12 md:py-16">
+        <div class="max-w-2xl">
+          <p class="eyebrow">Our Expertise</p>
+          <h2 class="section-title mt-4">Comprehensive Services</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="service-card">
+            <span class="icon-chip">
+              <i class="fa-solid fa-building-columns"></i>
+            </span>
+            <h3 class="mt-5 font-display text-lg text-slate-900">University Selection</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Personalized mapping of your academic profile to the world’s best-fit
+              institutions.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="icon-chip">
+              <i class="fa-regular fa-file-lines"></i>
+            </span>
+            <h3 class="mt-5 font-display text-lg text-slate-900">Visa Guidance</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              End-to-end documentation support to ensure high-quality, confident
+              applications.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="icon-chip">
+              <i class="fa-solid fa-money-bill-wave"></i>
+            </span>
+            <h3 class="mt-5 font-display text-lg text-slate-900">Scholarship Support</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Access exclusive funding and school-based awards you can actually apply
+              for.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="icon-chip">
+              <i class="fa-solid fa-plane-departure"></i>
+            </span>
+            <h3 class="mt-5 font-display text-lg text-slate-900">Pre-departure Briefing</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              Practical preparation for travel, accommodation, and settling into your
+              host country.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="destinations" class="shell py-16">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="eyebrow">Global Reach</p>
+            <h2 class="section-title mt-4">Top Study Destinations</h2>
+          </div>
+          <a
+            href="#apply"
+            class="outline-btn"
+          >
+            View All Destinations
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="group destination-card">
+            <img
+              src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+              alt="United Kingdom flag"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="relative z-10 flex h-full flex-col justify-end p-6 text-white">
+              <h3 class="font-display text-2xl">United Kingdom</h3>
+              <p class="mt-3 max-w-[15rem] text-sm leading-6 text-white/80">
+                High-ranking programs, post-study work routes, and a broad selection of cities.
+              </p>
+            </div>
+          </article>
+
+          <article class="group destination-card">
+            <img
+              src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+              alt="Canada flag"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="relative z-10 flex h-full flex-col justify-end p-6 text-white">
+              <h3 class="font-display text-2xl">Canada</h3>
+              <p class="mt-3 max-w-[15rem] text-sm leading-6 text-white/80">
+                Strong immigration pathways and supportive student communities with real opportunities.
+              </p>
+            </div>
+          </article>
+
+          <article class="group destination-card">
+            <img
+              src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+              alt="Ireland flag"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="relative z-10 flex h-full flex-col justify-end p-6 text-white">
+              <h3 class="font-display text-2xl">Ireland</h3>
+              <p class="mt-3 max-w-[15rem] text-sm leading-6 text-white/80">
+                Innovation-led universities with fast-growing tech and healthcare sectors.
+              </p>
+            </div>
+          </article>
+
+          <article class="group destination-card">
+            <img
+              src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+              alt="Australia flag"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <div class="relative z-10 flex h-full flex-col justify-end p-6 text-white">
+              <h3 class="font-display text-2xl">Australia</h3>
+              <p class="mt-3 max-w-[15rem] text-sm leading-6 text-white/80">
+                Career-focused education with student-friendly cities and flexible study options.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell py-16 md:py-24">
+        <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div class="max-w-md">
+            <div class="flex gap-2 text-accent-300">
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+              <i class="fa-solid fa-star text-sm"></i>
+            </div>
+            <h2 class="section-title mt-6">We’re proud of our success stories</h2>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              Hear from some of our students who moved from uncertainty to admissions,
+              visas, and confident arrivals abroad.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="testimonial-tile sm:col-span-2">
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+                alt="Student portrait"
+                class="h-64 w-full object-cover"
+                loading="lazy"
+              />
+              <div class="p-4">
+                <p class="text-sm font-semibold text-slate-900">Tobi, Leeds Beckett University</p>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                  “The process felt clear from day one. I got support with my application, interview, and visa.”
+                </p>
+              </div>
+            </article>
+
+            <article class="testimonial-tile">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                alt="Student portrait"
+                class="h-44 w-full object-cover"
+                loading="lazy"
+              />
+            </article>
+
+            <article class="testimonial-tile">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                alt="Student portrait"
+                class="h-44 w-full object-cover"
+                loading="lazy"
+              />
+            </article>
+
+            <article class="testimonial-tile">
+              <img
+                src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                alt="Student portrait"
+                class="h-44 w-full object-cover"
+                loading="lazy"
+              />
+            </article>
+
+            <article class="testimonial-tile">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                alt="Student portrait"
+                class="h-44 w-full object-cover"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="apply" class="shell py-16 md:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
+          <div class="overflow-hidden shadow-card">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+              alt="Prospective student holding books"
+              class="h-full min-h-[520px] w-full object-cover"
+            />
+          </div>
+
+          <div class="max-w-xl">
+            <h2 class="section-title">Start your study abroad journey here</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Fill the application form below and our advisors will reach out with
+              the next best steps for your chosen destination.
+            </p>
+
+            <form class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="sm:col-span-2">
+                <label for="full-name" class="mb-2 block text-sm font-semibold text-slate-800">Full Name</label>
+                <input id="full-name" type="text" class="form-field" placeholder="Your full name" />
+              </div>
+
+              <div>
+                <label for="age" class="mb-2 block text-sm font-semibold text-slate-800">Age</label>
+                <input id="age" type="number" class="form-field" placeholder="19" />
+              </div>
+
+              <div>
+                <label for="phone" class="mb-2 block text-sm font-semibold text-slate-800">Phone Number</label>
+                <input id="phone" type="tel" class="form-field" placeholder="+234 800 000 0000" />
+              </div>
+
+              <div>
+                <label for="state" class="mb-2 block text-sm font-semibold text-slate-800">State</label>
+                <input id="state" type="text" class="form-field" placeholder="Lagos" />
+              </div>
+
+              <div>
+                <label for="country" class="mb-2 block text-sm font-semibold text-slate-800">Country</label>
+                <input id="country" type="text" class="form-field" placeholder="Nigeria" />
+              </div>
+
+              <div>
+                <label for="destination" class="mb-2 block text-sm font-semibold text-slate-800">Preferred Study Destination</label>
+                <select id="destination" class="form-field">
+                  <option>UK</option>
+                  <option>Canada</option>
+                  <option>Ireland</option>
+                  <option>Australia</option>
+                  <option>USA</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="interview" class="mb-2 block text-sm font-semibold text-slate-800">Client Interview</label>
+                <select id="interview" class="form-field">
+                  <option>Have not done yet</option>
+                  <option>Completed</option>
+                  <option>Scheduled</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="level" class="mb-2 block text-sm font-semibold text-slate-800">Program Interested In</label>
+                <select id="level" class="form-field">
+                  <option>A Levels</option>
+                  <option>Foundation</option>
+                  <option>Undergraduate</option>
+                  <option>Postgraduate</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="year" class="mb-2 block text-sm font-semibold text-slate-800">Client Progress Interested In?</label>
+                <select id="year" class="form-field">
+                  <option>2026 intake</option>
+                  <option>2027 intake</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="qualification" class="mb-2 block text-sm font-semibold text-slate-800">Highest Qualification</label>
+                <select id="qualification" class="form-field">
+                  <option>SSCE</option>
+                  <option>OND</option>
+                  <option>HND</option>
+                  <option>Bachelor's degree</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="question" class="mb-2 block text-sm font-semibold text-slate-800">Other Qualification?</label>
+                <input id="question" type="text" class="form-field" placeholder="Optional" />
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="budget" class="mb-2 block text-sm font-semibold text-slate-800">How did you hear about us?</label>
+                <select id="budget" class="form-field">
+                  <option>A friend</option>
+                  <option>Instagram</option>
+                  <option>Referral partner</option>
+                  <option>Google search</option>
+                </select>
+              </div>
+
+              <div class="sm:col-span-2 pt-3">
+                <button type="submit" class="primary-btn">
+                  Submit Application
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="shell py-16 md:py-20">
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-2xl">
+            <h2 class="section-title">Latest from our Blog</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              The latest news, technologies, and resources from our team to help you
+              make informed study abroad decisions.
+            </p>
+          </div>
+          <a
+            id="resources"
+            href="#home"
+            class="outline-btn"
+          >
+            Explore All Resources
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+              alt="Plant on a table"
+              class="h-60 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Scholarships • 5 Min Read</p>
+              <h3 class="mt-3 font-display text-xl text-slate-900">
+                Top UK scholarships for Nigerian students in 2026
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Discover fully funded opportunities, key eligibility criteria, and
+                timelines worth planning around.
+              </p>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+              alt="Woman smiling"
+              class="h-60 w-full object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Test Prep • 3 Min Read</p>
+              <h3 class="mt-3 font-display text-xl text-slate-900">
+                IELTS preparation: how to score band 8.0 on your first try
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Master the listening, speaking, and writing sections with a focused,
+                realistic weekly plan.
+              </p>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="grid h-60 place-items-center bg-brand-50 text-center">
+              <div>
+                <p class="font-display text-5xl tracking-[0.35em] text-brand-700">BLOG</p>
+                <p class="mt-6 text-sm uppercase tracking-[0.4em] text-brand-500">Visa tips</p>
+                <p class="mt-3 text-sm uppercase tracking-[0.4em] text-brand-500">Student stories</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Student Life • 10 Min Read</p>
+              <h3 class="mt-3 font-display text-xl text-slate-900">
+                Cost of living comparison: UK vs Canada vs USA
+              </h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                A comprehensive breakdown of rent, food, and transport to help you
+                budget for international student life.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="faq" class="mt-12 bg-brand-800 text-white">
+      <div class="shell py-16">
+        <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-2 xl:grid-cols-4">
+          <div>
+            <div class="flex items-center gap-3">
+              <span
+                class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-accent-300"
+              >
+                <i class="fa-solid fa-earth-africa text-lg"></i>
+              </span>
+              <span>
+                <span class="block font-display text-lg font-semibold tracking-wide">STUDYGUIDE</span>
+                <span class="block text-[10px] uppercase tracking-[0.36em] text-white/60"
+                  >Education Consult</span
+                >
+              </span>
+            </div>
+            <p class="mt-6 max-w-sm text-sm leading-7 text-white/65">
+              Helping students make confident international education decisions with
+              expert guidance and practical support.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-lg">Contact</h3>
+            <div class="mt-5 space-y-3 text-sm text-white/70">
+              <p><span class="font-semibold text-white">Office:</span> 12 Allen Avenue, Ikeja, Lagos State</p>
+              <p><span class="font-semibold text-white">Phone:</span> +234 802 777 1314</p>
+              <p><span class="font-semibold text-white">Email:</span> info@studyguide.edu.ng</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-display text-lg">Quick Links</h3>
+            <div class="mt-5 space-y-3">
+              <a href="#services" class="footer-link block">About us</a>
+              <a href="#destinations" class="footer-link block">Destinations</a>
+              <a href="#faq" class="footer-link block">FAQ</a>
+              <a href="#blog" class="footer-link block">Blog</a>
+              <a href="#resources" class="footer-link block">Resources</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-display text-lg">Stay up to date</h3>
+            <p class="mt-5 text-sm leading-7 text-white/65">
+              Study abroad news and opportunities, first access to new intakes, and
+              practical planning tips delivered monthly.
+            </p>
+            <form class="mt-5 flex flex-col gap-3 sm:flex-row">
+              <input type="email" class="form-field min-w-0 flex-1 border-white/15 bg-white text-slate-900" placeholder="Enter your email" />
+              <button type="submit" class="primary-btn justify-center px-4">
+                Subscribe
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
+          <p>&copy; 2026 StudyGuide. All rights reserved.</p>
+          <div class="flex items-center gap-5 text-base">
+            <a href="#" aria-label="X" class="transition hover:text-accent-200"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn" class="transition hover:text-accent-200"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram" class="transition hover:text-accent-200"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook" class="transition hover:text-accent-200"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <p>Design by StudyGuide.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
