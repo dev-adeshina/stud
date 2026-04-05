@@ -1,12 +1,12 @@
-# Video Play Icon Modal Implementation
+# Video Modal Enhancement TODO
 
-## Steps:
+## Plan Implementation Steps
 
-- [x] 1. Add modal HTML structure to index.html
-- [x] 2. Update testimonial play span with onclick
-- [x] 3. Add modal CSS styles
-- [x] 4. Add JavaScript functions and event listeners
-- [x] 5. Test functionality  
-- [x] 6. Complete task
+### 1. [ ] Update CSS styles for modal and video sizing (80% height, responsive)
+### 2. [ ] Enhance click-outside-to-close functionality in JS
+### 3. [ ] Adjust modal container and close button positioning
+### 4. [ ] Test responsiveness and functionality
+### 5. [ ] Mark complete and attempt_completion
 
-**✅ Task completed!**
+**Current progress: Steps 1-3 completed (CSS/HTML structure updated for 80vh height, responsive sizing, fixed close button, simplified modal). Proceeding to JS enhancement and testing.**
+
