@@ -228,7 +228,8 @@
           height: 480px;
         }
 
-        .testimonial-card img {
+        .testimonial-card img,
+        .testimonial-card video {
           @apply h-full w-full object-cover;
         }
 
@@ -255,7 +256,26 @@
         }
 
         .testimonial-play {
-          @apply absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-brand-800 shadow-soft;
+          @apply absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-brand-800 shadow-soft cursor-pointer hover:scale-110 transition-transform duration-200;
+        }
+
+        /* Modal Styles */
+        #videoModal {
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #videoModal.show {
+          opacity: 1;
+          visibility: visible;
+        }
+        #videoModal .min-h-full {
+          align-items: center;
+        }
+        @media (max-width: 640px) {
+          #videoModal video {
+            max-height: 70vh;
+          }
         }
 
         .testimonial-nav {
@@ -664,11 +684,16 @@
 
             <div class="testimonial-grid">
               <article class="testimonial-card">
-                <img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
-                  alt="Student portrait"
+                  <video
+                  src="assets/testimonial/first.mp4"
+                  alt="Video testimonial"
                   loading="lazy"
-                />
+                  muted
+                  playsinline
+                ></video>
+                <span class="testimonial-play" onclick="openVideoModal()" aria-hidden="true" role="button" tabindex="0" title="Play video">
+                  <i class="fa-solid fa-play"></i>
+                </span>
                 <div class="testimonial-overlay">
                   <div class="testimonial-stars">
                     <i class="fa-solid fa-star"></i>
@@ -678,26 +703,23 @@
                     <i class="fa-solid fa-star"></i>
                   </div>
                   <p class="testimonial-name">Toyosi</p>
-                  <p class="testimonial-school">University Name Goes Here</p>
-                  <p class="testimonial-country">Country goes here</p>
+                  <p class="testimonial-school">University of Hertfordshire</p>
+                  <p class="testimonial-country">UK</p>
                 </div>
               </article>
 
               <article class="testimonial-card">
                 <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                  alt="Student portrait"
+                  src="assets/testimonial/secod.png"
+                  alt="Toyosi testimonial"
                   loading="lazy"
                 />
-                <span class="testimonial-play" aria-hidden="true">
-                  <i class="fa-solid fa-play"></i>
-                </span>
               </article>
 
               <article class="testimonial-card">
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                  alt="Student portrait"
+                  src="assets/testimonial/third.png"
+                  alt="Ayomide testimonial"
                   loading="lazy"
                 />
                 <div class="testimonial-overlay">
@@ -709,8 +731,8 @@
                     <i class="fa-solid fa-star"></i>
                   </div>
                   <p class="testimonial-name">Ayomide</p>
-                  <p class="testimonial-school">University Name Goes Here</p>
-                  <p class="testimonial-country">Country goes here</p>
+                  <p class="testimonial-school">University of Windsor</p>
+                  <p class="testimonial-country">Canada</p>
                 </div>
               </article>
             </div>
@@ -1007,5 +1029,79 @@
         </div>
       </div>
     </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 z-[9999] hidden bg-black/90" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="flex min-h-full items-center justify-center p-4 sm:p-8">
+        <div class="relative w-full max-w-4xl max-h-[90vh]">
+          <!-- Close Button -->
+          <button id="closeModalBtn" class="absolute right-4 top-4 z-10 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-2xl text-slate-900 shadow-lg backdrop-blur-sm transition hover:bg-white hover:scale-105" aria-label="Close video" title="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          
+          <!-- Video Player -->
+          <video id="modalVideo" class="w-full rounded-2xl shadow-2xl" controls preload="metadata" playsinline>
+            <source src="assets/testimonial/first.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Video Modal Functions
+      function openVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('modalVideo');
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.add('show'), 10);
+        video.play().catch(e => console.log('Autoplay prevented:', e));
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('modalVideo');
+        modal.classList.remove('show');
+        video.pause();
+        video.currentTime = 0;
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }, 300);
+      }
+
+      // Event Listeners
+      document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('videoModal');
+        const closeBtn = document.getElementById('closeModalBtn');
+        const video = document.getElementById('modalVideo');
+
+        // Close on backdrop click
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeVideoModal();
+        });
+
+        // Close button
+        closeBtn.addEventListener('click', closeVideoModal);
+
+        // ESC key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeVideoModal();
+          }
+        });
+
+        // Keyboard navigation for play button
+        const playBtn = document.querySelector('.testimonial-play');
+        playBtn.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openVideoModal();
+          }
+        });
+      });
+    </script>
+
   </body>
 </html>
