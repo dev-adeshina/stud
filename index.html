@@ -210,8 +210,59 @@
           @apply relative z-10 flex h-full flex-col justify-end gap-3 px-6 pb-8 pt-16 text-white;
         }
 
-        .testimonial-tile {
-          @apply relative overflow-hidden bg-slate-100 shadow-soft;
+        .testimonial-section-heading {
+          @apply font-display text-[2.75rem] leading-[1.08] text-slate-900 md:text-[3.25rem];
+        }
+
+        .testimonial-section-copy {
+          @apply mt-5 max-w-xl font-body text-[1.375rem] leading-9 tracking-normal text-slate-500;
+        }
+
+        .testimonial-grid {
+          @apply mt-12 grid gap-6 lg:grid-cols-3;
+        }
+
+        .testimonial-card {
+          @apply relative overflow-hidden bg-slate-100;
+          min-height: 420px;
+        }
+
+        .testimonial-card img {
+          @apply h-full w-full object-cover;
+        }
+
+        .testimonial-overlay {
+          @apply absolute inset-x-0 bottom-0 px-5 pb-5 pt-4 text-white;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(82, 88, 97, 0.78) 100%);
+          backdrop-filter: blur(16px);
+        }
+
+        .testimonial-stars {
+          @apply flex gap-1 text-sm text-white;
+        }
+
+        .testimonial-name {
+          @apply mt-4 font-body text-[2rem] font-semibold leading-none text-white;
+        }
+
+        .testimonial-school {
+          @apply mt-3 font-body text-[0.95rem] font-semibold leading-6 text-white;
+        }
+
+        .testimonial-country {
+          @apply font-body text-[0.95rem] leading-6 text-white/85;
+        }
+
+        .testimonial-play {
+          @apply absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-brand-800 shadow-soft;
+        }
+
+        .testimonial-nav {
+          @apply mt-7 flex items-center gap-4;
+        }
+
+        .testimonial-nav-btn {
+          @apply inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-xl text-slate-400 transition hover:border-slate-300 hover:text-slate-600;
         }
 
         .form-field {
@@ -219,7 +270,43 @@
         }
 
         .blog-card {
-          @apply overflow-hidden border border-slate-200 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card;
+          @apply bg-transparent p-4 shadow-none transition duration-300 hover:-translate-y-1 hover:shadow-none;
+        }
+
+        .blog-card-media {
+          @apply h-64 w-full rounded-2xl object-cover;
+        }
+
+        .blog-card-placeholder {
+          @apply grid h-64 place-items-center rounded-2xl bg-brand-50 text-center;
+        }
+
+        .blog-card-body {
+          @apply px-1 pb-2 pt-5;
+        }
+
+        .blog-card-meta {
+          @apply font-body text-sm font-semibold leading-5 tracking-normal text-[#16484B];
+        }
+
+        .blog-card-heading {
+          @apply mt-4 grid grid-cols-[90%_10%] items-start gap-2;
+        }
+
+        .blog-card-title {
+          @apply w-full font-display text-2xl leading-7 text-slate-900;
+        }
+
+        .blog-card-arrow {
+          @apply mt-0.5 inline-flex w-full items-center justify-end text-lg leading-none text-slate-500;
+        }
+
+        .blog-card-arrow i {
+          transform: rotate(-45deg);
+        }
+
+        .blog-card-copy {
+          @apply mt-4 font-body text-base leading-7 tracking-normal text-slate-600;
         }
 
         .footer-link {
@@ -567,74 +654,73 @@
             </article>
           </div>
         </section>
-        <section class="shell  py-16 md:py-24">
-          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <div class="max-w-md">
-              <div class="flex gap-2 text-accent-300">
-                <i class="fa-solid fa-star text-sm"></i>
-                <i class="fa-solid fa-star text-sm"></i>
-                <i class="fa-solid fa-star text-sm"></i>
-                <i class="fa-solid fa-star text-sm"></i>
-                <i class="fa-solid fa-star text-sm"></i>
-              </div>
-              <h2 class="section-title mt-6">We’re proud of our success stories</h2>
-              <p class="mt-5 text-base leading-8 text-slate-600">
-                Hear from some of our students who moved from uncertainty to admissions,
-                visas, and confident arrivals abroad.
-              </p>
-            </div>
+        <section class="shell py-16 md:py-24">
+          <div>
+            <h2 class="testimonial-section-heading">We’re proud of our success stories</h2>
+            <p class="testimonial-section-copy">
+              Hear from some of our amazing students we have helped.
+            </p>
 
-            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              <article class="testimonial-tile sm:col-span-2">
+            <div class="testimonial-grid">
+              <article class="testimonial-card">
                 <img
                   src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
                   alt="Student portrait"
-                  class="h-64 w-full object-cover"
                   loading="lazy"
                 />
-                <div class="p-4">
-                  <p class="text-sm font-semibold text-slate-900">Tobi, Leeds Beckett University</p>
-                  <p class="mt-2 text-sm leading-6 text-slate-600">
-                    “The process felt clear from day one. I got support with my application, interview, and visa.”
-                  </p>
+                <div class="testimonial-overlay">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-name">Toyosi</p>
+                  <p class="testimonial-school">University Name Goes Here</p>
+                  <p class="testimonial-country">Country goes here</p>
                 </div>
               </article>
 
-              <article class="testimonial-tile">
+              <article class="testimonial-card">
                 <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
                   alt="Student portrait"
-                  class="h-44 w-full object-cover"
                   loading="lazy"
                 />
+                <span class="testimonial-play" aria-hidden="true">
+                  <i class="fa-solid fa-play"></i>
+                </span>
               </article>
 
-              <article class="testimonial-tile">
+              <article class="testimonial-card">
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
                   alt="Student portrait"
-                  class="h-44 w-full object-cover"
                   loading="lazy"
                 />
+                <div class="testimonial-overlay">
+                  <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-name">Ayomide</p>
+                  <p class="testimonial-school">University Name Goes Here</p>
+                  <p class="testimonial-country">Country goes here</p>
+                </div>
               </article>
+            </div>
 
-              <article class="testimonial-tile">
-                <img
-                  src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
-                  alt="Student portrait"
-                  class="h-44 w-full object-cover"
-                  loading="lazy"
-                />
-              </article>
-
-              <article class="testimonial-tile">
-                <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
-                  alt="Student portrait"
-                  class="h-44 w-full object-cover"
-                  loading="lazy"
-                />
-              </article>
+            <div class="testimonial-nav" aria-label="Testimonial navigation">
+              <button type="button" class="testimonial-nav-btn" aria-label="Previous testimonial">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button type="button" class="testimonial-nav-btn" aria-label="Next testimonial">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
           </div>
         </section>
@@ -774,20 +860,23 @@
             </a>
           </div>
 
-          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <div class="mt-12 grid gap-3 lg:grid-cols-3">
             <article class="blog-card">
               <img
                 src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
                 alt="Plant on a table"
-                class="h-60 w-full object-cover"
+                class="blog-card-media"
                 loading="lazy"
               />
-              <div class="p-6">
-                <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Scholarships • 5 Min Read</p>
-                <h3 class="mt-3 font-display text-xl text-slate-900">
-                  Top UK scholarships for Nigerian students in 2026
-                </h3>
-                <p class="mt-3 text-sm leading-7 text-slate-600">
+              <div class="blog-card-body">
+                <p class="blog-card-meta">Scholarships • 5 Min Read</p>
+                <div class="blog-card-heading">
+                  <h3 class="blog-card-title">Top UK scholarships for Nigerian students in 2026</h3>
+                  <span class="blog-card-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </div>
+                <p class="blog-card-copy">
                   Discover fully funded opportunities, key eligibility criteria, and
                   timelines worth planning around.
                 </p>
@@ -798,15 +887,18 @@
               <img
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
                 alt="Woman smiling"
-                class="h-60 w-full object-cover"
+                class="blog-card-media"
                 loading="lazy"
               />
-              <div class="p-6">
-                <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Test Prep • 3 Min Read</p>
-                <h3 class="mt-3 font-display text-xl text-slate-900">
-                  IELTS preparation: how to score band 8.0 on your first try
-                </h3>
-                <p class="mt-3 text-sm leading-7 text-slate-600">
+              <div class="blog-card-body">
+                <p class="blog-card-meta">Test Prep • 3 Min Read</p>
+                <div class="blog-card-heading">
+                  <h3 class="blog-card-title">IELTS preparation: how to score band 8.0 on your first try</h3>
+                  <span class="blog-card-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </div>
+                <p class="blog-card-copy">
                   Master the listening, speaking, and writing sections with a focused,
                   realistic weekly plan.
                 </p>
@@ -814,19 +906,22 @@
             </article>
 
             <article class="blog-card">
-              <div class="grid h-60 place-items-center bg-brand-50 text-center">
+              <div class="blog-card-placeholder">
                 <div>
                   <p class="font-display text-5xl tracking-[0.35em] text-brand-700">BLOG</p>
                   <p class="mt-6 text-sm uppercase tracking-[0.4em] text-brand-500">Visa tips</p>
                   <p class="mt-3 text-sm uppercase tracking-[0.4em] text-brand-500">Student stories</p>
                 </div>
               </div>
-              <div class="p-6">
-                <p class="text-xs uppercase tracking-[0.24em] text-slate-400">Student Life • 10 Min Read</p>
-                <h3 class="mt-3 font-display text-xl text-slate-900">
-                  Cost of living comparison: UK vs Canada vs USA
-                </h3>
-                <p class="mt-3 text-sm leading-7 text-slate-600">
+              <div class="blog-card-body">
+                <p class="blog-card-meta">Student Life • 10 Min Read</p>
+                <div class="blog-card-heading">
+                  <h3 class="blog-card-title">Cost of living comparison: UK vs Canada vs USA</h3>
+                  <span class="blog-card-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </div>
+                <p class="blog-card-copy">
                   A comprehensive breakdown of rent, food, and transport to help you
                   budget for international student life.
                 </p>
@@ -837,7 +932,10 @@
       </div> 
     </main>
 
-    <footer id="faq" class="mt-12 bg-brand-800 text-white">
+    <footer id="faq" class="relative mt-12 overflow-hidden bg-brand-800 text-white">
+      <div
+        class="pointer-events-none absolute -top-px right-0 h-20 w-28 bg-white [clip-path:polygon(100%_100%,0_0,100%_0)]"
+      ></div>
       <div class="shell py-16">
         <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-2 xl:grid-cols-[1fr_0.85fr_0.8fr_1.35fr]">
           <div>
