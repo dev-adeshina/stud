@@ -360,7 +360,7 @@
               <i class="fa-solid fa-arrow-right cta-arrow"></i>
             </a> -->
 
-            <button id="pixel-btn" class="group relative flex items-center justify-between w-64 h-14 px-6 overflow-hidden bg-transparent border border-white/10 rounded-md transition-colors duration-300 hover:border-white/30">
+            <!-- <button id="pixel-btn" class="group relative flex items-center justify-between w-64 h-14 px-6 overflow-hidden bg-transparent border border-white/10 rounded-md transition-colors duration-300 hover:border-white/30">
     
               <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
                 </div>
@@ -375,7 +375,34 @@
                 </svg>
               </div>
               
-            </button>
+            </button> -->
+
+            <a href="https://subduxion.com/contact-us" id="pixel-anchor" class="group relative inline-flex items-center justify-between min-w-[180px] h-12 px-5 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+    
+              <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+                </div>
+
+              <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black">
+                Get in touch
+              </span>
+
+              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="2.5" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+              
+            </a>
             
             <details class="relative md:hidden">
               <summary
@@ -1118,12 +1145,60 @@
         });
       });
 
-      const grid = document.getElementById('pixel-grid');
-      const btn = document.getElementById('pixel-btn');
+      // const grid = document.getElementById('pixel-grid');
+      // const btn = document.getElementById('pixel-btn');
       
-      // High density for the "Framer" look
-      const rows = 1;
-      const cols = 8;
+      // // High density for the "Framer" look
+      // const rows = 1;
+      // const cols = 8;
+
+      // grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+      // grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+      // const tiles = [];
+
+      // for (let i = 0; i < rows * cols; i++) {
+      //   const tile = document.createElement('div');
+        
+      //   // We use a bright blue/cyan often seen in these components
+      //   tile.className = "w-full h-full bg-[#4ade80] opacity-0 transition-all duration-300 ease-in-out scale-0";
+        
+      //   // RANDOMIZE: Each pixel gets a random delay between 0 and 400ms
+      //   // This creates the "scattered" appearance
+      //   const randomDelay = Math.random() * 400;
+      //   tile.style.transitionDelay = `${randomDelay}ms`;
+        
+      //   grid.appendChild(tile);
+      //   tiles.push(tile);
+      // }
+
+      // // Hover Interactions
+      // btn.addEventListener('mouseenter', () => {
+      //   tiles.forEach(t => {
+      //     t.classList.add('opacity-100', 'scale-[1.15]');
+      //   });
+      // });
+
+      // btn.addEventListener('mouseleave', () => {
+      //   // When leaving, we want them to disappear in a new random order
+      //   tiles.forEach(t => {
+      //     // Refresh random delay for the "out" transition
+      //     t.style.transitionDelay = `${Math.random() * 200}ms`;
+      //     t.classList.remove('opacity-100', 'scale-[1.15]');
+      //   });
+      // });
+
+      // const randomDuration = 200 + Math.random() * 300;
+      // tile.style.transitionDuration = `${randomDuration}ms`;
+
+
+      const grid = document.getElementById('pixel-grid');
+      const anchor = document.getElementById('pixel-anchor');
+      
+      // Settings for the "Framer" feel
+      const rows = 2;
+      const cols = 7; 
+      const pixelColor = '#dbeafe'; // Matches the light blue in your image
 
       grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
       grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
@@ -1133,36 +1208,31 @@
       for (let i = 0; i < rows * cols; i++) {
         const tile = document.createElement('div');
         
-        // We use a bright blue/cyan often seen in these components
-        tile.className = "w-full h-full bg-[#4ade80] opacity-0 transition-all duration-300 ease-in-out scale-0";
+        tile.style.backgroundColor = pixelColor;
+        tile.className = "w-full h-full opacity-0 transition-all duration-300 ease-in-out scale-0";
         
-        // RANDOMIZE: Each pixel gets a random delay between 0 and 400ms
-        // This creates the "scattered" appearance
-        const randomDelay = Math.random() * 400;
-        tile.style.transitionDelay = `${randomDelay}ms`;
+        // Initial random entry delay
+        tile.style.transitionDelay = `${Math.random() * 400}ms`;
         
         grid.appendChild(tile);
         tiles.push(tile);
       }
 
-      // Hover Interactions
-      btn.addEventListener('mouseenter', () => {
+      // Interaction logic
+      anchor.addEventListener('mouseenter', () => {
         tiles.forEach(t => {
-          t.classList.add('opacity-100', 'scale-[1.15]');
+          // Refresh delay on every hover for organic feel
+          t.style.transitionDelay = `${Math.random() * 350}ms`;
+          t.classList.add('opacity-100', 'scale-[1.2]');
         });
       });
 
-      btn.addEventListener('mouseleave', () => {
-        // When leaving, we want them to disappear in a new random order
+      anchor.addEventListener('mouseleave', () => {
         tiles.forEach(t => {
-          // Refresh random delay for the "out" transition
-          t.style.transitionDelay = `${Math.random() * 200}ms`;
-          t.classList.remove('opacity-100', 'scale-[1.15]');
+          t.style.transitionDelay = `${Math.random() * 250}ms`;
+          t.classList.remove('opacity-100', 'scale-[1.2]');
         });
       });
-
-      const randomDuration = 200 + Math.random() * 300;
-      tile.style.transitionDuration = `${randomDuration}ms`;
     </script>
 
 
