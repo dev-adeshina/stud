@@ -360,15 +360,23 @@
               <i class="fa-solid fa-arrow-right cta-arrow"></i>
             </a> -->
 
-            <a href="#apply" class="inline-flex h-11 items-center justify-between group relative flex h-[52px] w-full items-center justify-center gap-2 overflow-hidden rounded-initial bg-[#131313] px-6 py-0 no-underline transition-opacity duration-300 hover:opacity-90" >
-              <span class="text-sm font-medium text-white">Book A Session</span>
-              <div class="relative flex h-5 w-5 items-center justify-center rounded-[2px] bg-[#98fe00]">
-                <div class="h-2 w-2 bg-[#131313]"></div>
-                
-                <div class="absolute inset-0 bg-[#131313] opacity-0 blur-[5px] transition-opacity group-hover:opacity-100"></div>
+            <button id="pixel-btn" class="group relative flex items-center justify-between w-64 h-14 px-6 overflow-hidden bg-transparent border border-white/10 rounded-md transition-colors duration-300 hover:border-white/30">
+    
+              <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+                </div>
+
+              <span class="relative z-10 text-white font-medium tracking-tight transition-colors duration-500 group-hover:text-black">
+                Send message
+              </span>
+
+              <div class="relative z-10 flex items-center justify-center w-5 h-5 transition-all duration-500 group-hover:invert">
+                <svg viewBox="0 0 24 24" fill="none" class="w-full h-full stroke-white group-hover:stroke-black" stroke-width="2.5">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <!-- <i class="fa-solid fa-arrow-right cta-arrow"></i> -->
-            </a>
+              
+            </button>
+            
             <details class="relative md:hidden">
               <summary
                 class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-[8px] border border-white/15 bg-white/10 text-white transition hover:bg-white/15"
@@ -1109,7 +1117,54 @@
           }
         });
       });
+
+      const grid = document.getElementById('pixel-grid');
+      const btn = document.getElementById('pixel-btn');
+      
+      // High density for the "Framer" look
+      const rows = 1;
+      const cols = 8;
+
+      grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+      grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+      const tiles = [];
+
+      for (let i = 0; i < rows * cols; i++) {
+        const tile = document.createElement('div');
+        
+        // We use a bright blue/cyan often seen in these components
+        tile.className = "w-full h-full bg-[#4ade80] opacity-0 transition-all duration-300 ease-in-out scale-0";
+        
+        // RANDOMIZE: Each pixel gets a random delay between 0 and 400ms
+        // This creates the "scattered" appearance
+        const randomDelay = Math.random() * 400;
+        tile.style.transitionDelay = `${randomDelay}ms`;
+        
+        grid.appendChild(tile);
+        tiles.push(tile);
+      }
+
+      // Hover Interactions
+      btn.addEventListener('mouseenter', () => {
+        tiles.forEach(t => {
+          t.classList.add('opacity-100', 'scale-[1.15]');
+        });
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        // When leaving, we want them to disappear in a new random order
+        tiles.forEach(t => {
+          // Refresh random delay for the "out" transition
+          t.style.transitionDelay = `${Math.random() * 200}ms`;
+          t.classList.remove('opacity-100', 'scale-[1.15]');
+        });
+      });
+
+      const randomDuration = 200 + Math.random() * 300;
+      tile.style.transitionDuration = `${randomDuration}ms`;
     </script>
+
 
   </body>
 </html>
