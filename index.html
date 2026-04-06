@@ -76,7 +76,7 @@
         }
       }
 
-      @layer components {
+@layer components {
         .shell {
           @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
         }
@@ -93,54 +93,23 @@
           @apply font-display font-semibold text-4xl leading-[1.1] tracking-[-0.02em] text-[#181D27] md:text-5xl;
         }
 
-        .primary-btn {
-          @apply inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900 bg-accent-300 pl-4 pr-2 text-sm font-bold leading-none text-brand-900 opacity-100 transition duration-300 hover:-translate-y-0.5 hover:bg-accent-200;
-        }
-
-        .ghost-btn {
-          @apply inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-accent-300 pl-4 pr-2 text-sm font-semibold leading-none text-white/85 opacity-100 transition duration-300 hover:-translate-y-0.5 hover:border-accent-200 hover:bg-white/10 hover:text-white;
-        }
-
-        .outline-btn {
-          @apply inline-flex h-11 w-fit items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-800 pl-4 pr-2 text-sm font-semibold leading-none text-brand-800 opacity-100 transition hover:bg-brand-800 hover:text-white;
-        }
-
-        .nav-link {
-          @apply inline-flex min-w-[100px] h-[46px] items-center justify-center px-4 text-sm font-medium text-white/75 opacity-100 transition hover:text-white;
-        }
-
-        .nav-link-active {
-          @apply border-b border-accent-300 text-white;
-        }
-
         .cta-wide {
           @apply sm:min-w-[236px];
         }
 
         .cta-arrow {
-          @apply inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-[4px] text-[10px] leading-none transition;
+          @apply group-hover:translate-x-1.5 relative inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-[4px] text-[10px] leading-none transition-all duration-300;
         }
 
         .cta-arrow::before {
+          content: '';
+          @apply absolute inset-0 bg-brand-900/50 rounded-[4px] opacity-0 blur-sm transition-all duration-300 group-hover:opacity-100;
+        }
+
+        .cta-arrow i {
           display: inline-block;
           transform: rotate(-35deg);
           transform-origin: center;
-        }
-
-        .primary-btn .cta-arrow {
-          @apply bg-brand-900 text-accent-300;
-        }
-
-        .ghost-btn .cta-arrow {
-          @apply bg-accent-300 text-brand-900;
-        }
-
-        .outline-btn .cta-arrow {
-          @apply bg-brand-800 text-white;
-        }
-
-        .outline-btn:hover .cta-arrow {
-          @apply bg-white text-brand-800;
         }
 
         .footer-subscribe-input {
@@ -160,7 +129,7 @@
         }
 
         .logo-tile {
-          @apply flex h-[88px] shrink-0 items-center justify-center rounded-[10px] bg-white px-6 py-4;
+          @apply flex h-[88px] shrink-0 items-center justify-center rounded-[8px] bg-white px-6 py-4;
         }
 
         .logo-image {
@@ -223,7 +192,7 @@
         }
 
 .testimonial-card {
-          @apply relative overflow-hidden bg-slate-100 rounded-none;
+          @apply relative overflow-hidden bg-slate-100;
           width: 384px;
           height: 480px;
         }
@@ -292,7 +261,7 @@
         }
 
         .form-field {
-          @apply w-full border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100;
+          @apply w-full rounded-[8px] border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100;
         }
 
         .blog-card {
@@ -300,7 +269,7 @@
         }
 
         .blog-card-media {
-          @apply h-64 w-full rounded-2xl object-cover;
+          @apply h-64 w-full rounded-[8px] object-cover;
         }
 
         .blog-card-placeholder {
@@ -386,9 +355,9 @@
           </div>
 
           <div class="flex items-center gap-3">
-            <a href="#apply" class="primary-btn cta-wide hidden sm:inline-flex">
-              Book A Session
-              <i class="cta-arrow fa-solid fa-arrow-right"></i>
+            <a href="#apply" class="inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 sm:min-w-[236px]" >
+              <span>Book A Session</span>
+              <i class="fa-solid fa-arrow-right cta-arrow"></i>
             </a>
             <details class="relative md:hidden">
               <summary
@@ -404,9 +373,9 @@
                   <a href="#resources" class="block hover:text-white">FREE RESOURCES</a>
                   <a href="#faq" class="block hover:text-white">FAQ</a>
                   <a href="#blog" class="block hover:text-white">BLOG</a>
-                  <a href="#apply" class="primary-btn mt-2 w-full">
-                    Book A Session
-                    <i class="cta-arrow fa-solid fa-arrow-right"></i>
+                  <a href="#apply" class="group inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full" >
+                    <span>Book A Session</span>
+                    <i class="fa-solid fa-arrow-right cta-arrow"></i>
                   </a>
                 </div>
               </div>
@@ -438,13 +407,13 @@
             </p>
 
             <div class="mt-10 flex flex-wrap items-center gap-5">
-              <a href="#destinations" class="primary-btn cta-wide">
-                Explore Destinations
-                <i class="cta-arrow fa-solid fa-arrow-right"></i>
+              <a href="#destinations" class="inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 sm:min-w-[236px]" >
+                <span>Explore Destinations</span>
+                <i class="fa-solid fa-arrow-right cta-arrow"></i>
               </a>
-              <a href="#apply" class="ghost-btn cta-wide">
-                Get Free Advice
-                <i class="cta-arrow fa-solid fa-arrow-right"></i>
+              <a href="#apply" class="inline-flex h-11 items-center justify-center gap-4 whitespace-nowrap rounded-[8px] border-2 border-white/20 bg-white/10 pl-6 pr-8 text-sm font-semibold text-white backdrop-blur-sm hover:border-white/40 hover:bg-white/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 sm:min-w-[236px]">
+                <span>Get Free Advice</span>
+                <i class="fa-solid fa-arrow-right cta-arrow"></i>
               </a>
             </div>
           </div>
@@ -615,10 +584,10 @@
             </div>
             <a
               href="#apply"
-              class="outline-btn cta-wide"
+              class="inline-flex h-11 w-fit items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border-2 border-brand-700 pl-4 pr-2 text-sm font-semibold text-brand-700 hover:bg-brand-700 hover:text-white transition-all duration-300 sm:min-w-[236px]"
             >
-              View All Destinations
-              <i class="cta-arrow fa-solid fa-arrow-right"></i>
+              <span>View All Destinations</span>
+              <i class="fa-solid fa-arrow-right cta-arrow"></i>
             </a>
           </div>
 
@@ -869,9 +838,9 @@
                 </div>
 
                 <div class="sm:col-span-2 pt-3 mx-auto">
-                  <button type="submit" class="primary-btn cta-wide w-[60%]">
-                    Submit Application
-                    <i class="cta-arrow fa-solid fa-arrow-right"></i>
+                  <button type="submit" class="inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 w-[60%] mx-auto pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <span>Submit Application</span>
+                    <i class="fa-solid fa-arrow-right cta-arrow"></i>
                   </button>
                 </div>
               </form>
@@ -890,10 +859,10 @@
             <a
               id="resources"
               href="#home"
-              class="outline-btn cta-wide"
+              class="inline-flex h-11 w-fit items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border-2 border-brand-700 pl-4 pr-2 text-sm font-semibold text-brand-700 hover:bg-brand-700 hover:text-white transition-all duration-300 sm:min-w-[236px]"
             >
-              Explore All Resources
-              <i class="cta-arrow fa-solid fa-arrow-right"></i>
+              <span>Explore All Resources</span>
+              <i class="fa-solid fa-arrow-right cta-arrow"></i>
             </a>
           </div>
 
@@ -1023,9 +992,9 @@
             </p>
             <form class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-stretch">
               <input type="email" class="footer-subscribe-input form-field min-w-0 flex-1 border-white/15 bg-white text-slate-900 sm:min-w-[280px]" placeholder="Enter your email" />
-              <button type="submit" class="footer-subscribe-btn primary-btn cta-wide w-full sm:w-auto">
-                Subscribe
-                <i class="cta-arrow fa-solid fa-arrow-right"></i>
+              <button type="submit" class="footer-subscribe-btn inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 w-full sm:w-auto pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <span>Subscribe</span>
+                <i class="fa-solid fa-arrow-right cta-arrow"></i>
               </button>
             </form>
           </div>
