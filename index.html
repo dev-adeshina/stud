@@ -191,7 +191,7 @@
           @apply mt-12 grid gap-6 lg:grid-cols-3;
         }
 
-.testimonial-card {
+        .testimonial-card {
           @apply relative overflow-hidden bg-slate-100;
           width: 384px;
           height: 480px;
@@ -355,9 +355,19 @@
           </div>
 
           <div class="flex items-center gap-3">
-            <a href="#apply" class="inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 sm:min-w-[236px]" >
+            <!-- <a href="#apply" class="inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 sm:min-w-[236px]" >
               <span>Book A Session</span>
               <i class="fa-solid fa-arrow-right cta-arrow"></i>
+            </a> -->
+
+            <a href="#apply" class="inline-flex h-11 items-center justify-between group relative flex h-[52px] w-full items-center justify-center gap-2 overflow-hidden rounded-initial bg-[#131313] px-6 py-0 no-underline transition-opacity duration-300 hover:opacity-90" >
+              <span class="text-sm font-medium text-white">Book A Session</span>
+              <div class="relative flex h-5 w-5 items-center justify-center rounded-[2px] bg-[#98fe00]">
+                <div class="h-2 w-2 bg-[#131313]"></div>
+                
+                <div class="absolute inset-0 bg-[#131313] opacity-0 blur-[5px] transition-opacity group-hover:opacity-100"></div>
+              </div>
+              <!-- <i class="fa-solid fa-arrow-right cta-arrow"></i> -->
             </a>
             <details class="relative md:hidden">
               <summary
@@ -373,9 +383,18 @@
                   <a href="#resources" class="block hover:text-white">FREE RESOURCES</a>
                   <a href="#faq" class="block hover:text-white">FAQ</a>
                   <a href="#blog" class="block hover:text-white">BLOG</a>
-                  <a href="#apply" class="group inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full" >
+                  <!-- <a href="#apply" class="group inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-full" >
                     <span>Book A Session</span>
                     <i class="fa-solid fa-arrow-right cta-arrow"></i>
+                  </a> -->
+                  <a href="#apply" class="group relative flex h-[52px] w-full items-center justify-center gap-2 overflow-hidden rounded-initial bg-[#131313] px-6 py-0 no-underline transition-opacity duration-300 hover:opacity-90" >
+                    <span class="text-sm font-medium text-white">Book A Session</span>
+                    <div class="relative flex h-5 w-5 items-center justify-center rounded-[2px] bg-[#98fe00]">
+                      <div class="h-2 w-2 bg-[#131313]"></div>
+                      
+                      <div class="absolute inset-0 bg-[#131313] opacity-0 blur-[5px] transition-opacity group-hover:opacity-100"></div>
+                    </div>
+                    <!-- <i class="fa-solid fa-arrow-right cta-arrow"></i> -->
                   </a>
                 </div>
               </div>
