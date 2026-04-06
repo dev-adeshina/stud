@@ -1281,53 +1281,6 @@
         });
       });
 
-      // const grid = document.getElementById('pixel-grid');
-      // const btn = document.getElementById('pixel-btn');
-      
-      // // High density for the "Framer" look
-      // const rows = 1;
-      // const cols = 8;
-
-      // grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-      // grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-
-      // const tiles = [];
-
-      // for (let i = 0; i < rows * cols; i++) {
-      //   const tile = document.createElement('div');
-        
-      //   // We use a bright blue/cyan often seen in these components
-      //   tile.className = "w-full h-full bg-[#4ade80] opacity-0 transition-all duration-300 ease-in-out scale-0";
-        
-      //   // RANDOMIZE: Each pixel gets a random delay between 0 and 400ms
-      //   // This creates the "scattered" appearance
-      //   const randomDelay = Math.random() * 400;
-      //   tile.style.transitionDelay = `${randomDelay}ms`;
-        
-      //   grid.appendChild(tile);
-      //   tiles.push(tile);
-      // }
-
-      // // Hover Interactions
-      // btn.addEventListener('mouseenter', () => {
-      //   tiles.forEach(t => {
-      //     t.classList.add('opacity-100', 'scale-[1.15]');
-      //   });
-      // });
-
-      // btn.addEventListener('mouseleave', () => {
-      //   // When leaving, we want them to disappear in a new random order
-      //   tiles.forEach(t => {
-      //     // Refresh random delay for the "out" transition
-      //     t.style.transitionDelay = `${Math.random() * 200}ms`;
-      //     t.classList.remove('opacity-100', 'scale-[1.15]');
-      //   });
-      // });
-
-      // const randomDuration = 200 + Math.random() * 300;
-      // tile.style.transitionDuration = `${randomDuration}ms`;
-
-
       const grid = document.getElementById('pixel-grid');
       const anchor = document.getElementById('pixel-anchor');
       
