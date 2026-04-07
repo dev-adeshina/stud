@@ -76,7 +76,11 @@
         }
       }
 
-@layer components {
+      @layer components {
+        .font-inter { font-family: "Inter", sans-serif; }
+        .anchor-text {
+          @apply font-inter font-bold text-[16px] text-[#16484B] px-4 leading-[24px] tracking-[0px] align-middle;
+        }
         .shell {
           @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
         }
@@ -356,19 +360,19 @@
 
           <div class="flex items-center gap-3">
 
-            <a href="#apply" id="pixel-anchor" class="group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+            <a href="#apply"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
     
-              <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+              <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
                 </div>
 
-              <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black">
-                Book A Session
+              <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
+                Get In Touch
               </span>
 
-              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-md transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                  class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
                   viewBox="0 0 24 24" 
                   fill="none" 
                   stroke="currentColor" 
@@ -397,7 +401,7 @@
                   <a href="#resources" class="block hover:text-white">FREE RESOURCES</a>
                   <a href="#faq" class="block hover:text-white">FAQ</a>
                   <a href="#blog" class="block hover:text-white">BLOG</a>
-                  <a href="#apply" class="group relative flex h-[52px] w-full  items-center justify-center gap-4 overflow-hidden rounded-initial bg-[#131313] px-6 py-0 no-underline transition-opacity duration-300 hover:opacity-90" >
+                  <a href="#apply" class="group relative flex h-[52px] w-full  items-center justify-center gap-4 overflow-hidden rounded-initial bg-[#E2C065] px-6 py-0 no-underline transition-opacity duration-300 hover:opacity-90" >
                     <span class="text-sm font-medium text-white">Book A Session</span>
                     <div class="relative flex h-5 w-5 items-center justify-center rounded-[2px] bg-[#98fe00]">
                       <div class="h-2 w-2 bg-[#131313]"></div>
@@ -436,27 +440,19 @@
             </p>
 
             <div class="mt-10 flex flex-wrap items-center gap-5">
-              <!-- <a href="#destinations" class="inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 sm:min-w-[236px]" >
-                <span>Explore Destinations</span>
-                <i class="fa-solid fa-arrow-right cta-arrow"></i>
-              </a>
-              <a href="#apply" class="inline-flex h-11 items-center justify-center gap-4 whitespace-nowrap rounded-[8px] border-2 border-white/20 bg-white/10 pl-6 pr-8 text-sm font-semibold text-white backdrop-blur-sm hover:border-white/40 hover:bg-white/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 sm:min-w-[236px]">
-                <span>Get Free Advice</span>
-                <i class="fa-solid fa-arrow-right cta-arrow"></i>
-              </a> -->
-              <a href="#destinations" id="pixel-anchor" class="group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+              <a href="#destinations" class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
     
-                <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+                <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
                   </div>
 
-                <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black">
+                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
                   Explore Destinations
                 </span>
 
-                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-md transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                    class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
@@ -470,19 +466,19 @@
                 </div>
                 
               </a>
-              <a href="#apply" id="pixel-anchor" class="group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+              <a href="#apply"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#E2C065]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#16484b]/40">
       
-                <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+                <div class="pixel-grid absolute inset-0 grid pointer-events-none">
                   </div>
 
-                <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black">
+                <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-black">
                   Get Free Advice
                 </span>
 
-                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-md transition-all duration-500 group-hover:bg-[#16484b]">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                    class="w-5 h-5 text-black transition-transform duration-500 group-hover:text-[#E2C065]" 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
@@ -671,12 +667,12 @@
               <i class="fa-solid fa-arrow-right cta-arrow"></i>
             </a> -->
 
-            <a href="#destinations" id="pixel-anchor" class="group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+            <a href="#destinations"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
     
-                <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+                <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
                   </div>
 
-                <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black">
+                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-black">
                   View All Destinations
                 </span>
 
@@ -947,12 +943,12 @@
 
                 <div class="sm:col-span-2 pt-3 mx-auto">
 
-                  <button type="submit" id="pixel-anchor" class="group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+                  <button type="submit"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
     
-                    <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+                    <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
                       </div>
 
-                    <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black">
+                    <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-black">
                       Submit Application
                     </span>
 
@@ -1002,12 +998,12 @@
               <i class="fa-solid fa-arrow-right cta-arrow"></i>
             </a> -->
 
-            <a href="#home" id="pixel-anchor" class="group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+            <a href="#home"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
     
-              <div id="pixel-grid" class="absolute inset-0 grid pointer-events-none">
+              <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
                 </div>
 
-              <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black">
+              <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-black">
                 Explore All Resources
               </span>
 
@@ -1156,23 +1152,20 @@
             </p>
             <form class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-stretch">
               <input type="email" class="footer-subscribe-input form-field min-w-0 flex-1 border-white/15 bg-white text-slate-900 sm:min-w-[280px]" placeholder="Enter your email" />
-              <!-- <button type="submit" class="footer-subscribe-btn inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 w-full sm:w-auto pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span>Subscribe</span>
-                <i class="fa-solid fa-arrow-right cta-arrow"></i>
-              </button> -->
-              <button type="submit"  class="pixel-anchor footer-subscribe-btn group relative inline-flex items-center h-11 justify-between gap-4 min-w-[180px]  overflow-hidden rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 w-full sm:w-auto pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:border-white/40">
+             
+              <button type="submit"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
     
-                <div class="pixel-grid absolute inset-0 grid pointer-events-none border border-green-500">
+                <div class="pixel-grid absolute inset-0 grid pointer-events-none">
                   </div>
 
-                <span class="relative z-10 text-white text-sm font-medium transition-colors duration-500 group-hover:text-black border border-green-500">
+                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
                   Subscribe
                 </span>
 
-                <span class="relative z-10 flex items-center justify-center w-8 h-8 ml-14 border border-green-500 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+                <span class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5xp] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                    class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
@@ -1281,47 +1274,38 @@
         });
       });
 
-      const grid = document.querySelector('.pixel-grid');
-      const anchor = document.querySelector('.pixel-anchor');
-      
-      // Settings for the "Framer" feel
-      const rows = 2;
-      const cols = 7; 
-      const pixelColor = '#dbeafe'; // Matches the light blue in your image
+      const anchors = document.querySelectorAll('.pixel-anchor');
+      const rows = 2, cols = 7, pixelColor = '#16484B';
 
-      grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-      grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+      anchors.forEach(anchor => {
+        const grid = anchor.querySelector('.pixel-grid'); // per-anchor grid
+        grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+        grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
 
-      const tiles = [];
+        const tiles = [];
+        for (let i = 0; i < rows * cols; i++) {
+          const tile = document.createElement('div');
+          tile.style.backgroundColor = pixelColor;
+          tile.className = 'w-full h-full opacity-0 transition-all duration-300 ease-in-out scale-0';
+          tile.style.transitionDelay = `${Math.random() * 400}ms`;
+          grid.appendChild(tile);
+          tiles.push(tile);
+        }
 
-      for (let i = 0; i < rows * cols; i++) {
-        const tile = document.createElement('div');
-        
-        tile.style.backgroundColor = pixelColor;
-        tile.className = "w-full h-full opacity-0 transition-all duration-300 ease-in-out scale-0";
-        
-        // Initial random entry delay
-        tile.style.transitionDelay = `${Math.random() * 400}ms`;
-        
-        grid.appendChild(tile);
-        tiles.push(tile);
-      }
-
-      // Interaction logic
-      anchor.addEventListener('mouseenter', () => {
-        tiles.forEach(t => {
-          // Refresh delay on every hover for organic feel
-          t.style.transitionDelay = `${Math.random() * 350}ms`;
-          t.classList.add('opacity-100', 'scale-[1.2]');
+        anchor.addEventListener('mouseenter', () => {
+          tiles.forEach(t => {
+            t.style.transitionDelay = `${Math.random() * 350}ms`;
+            t.classList.add('opacity-100', 'scale-[1.2]');
+          });
+        });
+        anchor.addEventListener('mouseleave', () => {
+          tiles.forEach(t => {
+            t.style.transitionDelay = `${Math.random() * 250}ms`;
+            t.classList.remove('opacity-100', 'scale-[1.2]');
+          });
         });
       });
 
-      anchor.addEventListener('mouseleave', () => {
-        tiles.forEach(t => {
-          t.style.transitionDelay = `${Math.random() * 250}ms`;
-          t.classList.remove('opacity-100', 'scale-[1.2]');
-        });
-      });
     </script>
   </body>
 </html>
