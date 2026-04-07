@@ -244,6 +244,7 @@
           @apply absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-brand-800 shadow-soft cursor-pointer hover:scale-110 transition-transform duration-200;
         }
 
+        
         /* Modal Styles */
         #videoModal {
           opacity: 0;
@@ -775,11 +776,11 @@
                   muted
                   playsinline
                 ></video>
-                <span class="testimonial-play" onclick="openVideoModal()" aria-hidden="true" role="button" tabindex="0" title="Play video">
+                <span class="testimonial-play" data-modal="first" role="button" tabindex="0" title="Play video">
                   <i class="fa-solid fa-play"></i>
                 </span>
                 <div class="testimonial-overlay">
-                  <div class="testimonial-stars">
+                  <div class="testimonial-stars py-3">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -787,27 +788,49 @@
                     <i class="fa-solid fa-star"></i>
                   </div>
                   <p class="testimonial-name">Toyosi</p>
-                  <p class="testimonial-school">University of Hertfordshire</p>
+                  <p class="testimonial-school">University of Northumbria</p>
                   <p class="testimonial-country">UK</p>
                 </div>
               </article>
 
               <article class="testimonial-card">
-                <img
-                  src="assets/testimonial/secod.png"
-                  alt="Toyosi testimonial"
+                <video
+                  src="assets/testimonial/second.mp4"
+                  alt="Video testimonial"
                   loading="lazy"
-                />
+                  muted
+                  playsinline
+                ></video>
+                <span class="testimonial-play" data-modal="second" role="button" tabindex="0" title="Play video">
+                  <i class="fa-solid fa-play"></i>
+                </span>
+                <div class="testimonial-overlay">
+                  <div class="testimonial-stars py-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="testimonial-name">Deborah</p>
+                  <p class="testimonial-school">University of Lancashire</p>
+                  <p class="testimonial-country">UK</p>
+                </div>
               </article>
 
               <article class="testimonial-card">
-                <img
-                  src="assets/testimonial/third.png"
-                  alt="Ayomide testimonial"
+                <video
+                  src="assets/testimonial/third.mp4"
+                  alt="Video testimonial"
                   loading="lazy"
-                />
+                  muted
+                  playsinline
+                ></video>
+                <span class="testimonial-play" data-modal="third" role="button" tabindex="0" title="Play video">
+                  <i class="fa-solid fa-play"></i>
+                </span>
                 <div class="testimonial-overlay">
-                  <div class="testimonial-stars">
+                  <div class="testimonial-stars py-3">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -815,7 +838,7 @@
                     <i class="fa-solid fa-star"></i>
                   </div>
                   <p class="testimonial-name">Ayomide</p>
-                  <p class="testimonial-school">University of Windsor</p>
+                  <p class="testimonial-school">University of Sunderland</p>
                   <p class="testimonial-country">Canada</p>
                 </div>
               </article>
@@ -1189,84 +1212,46 @@
       </div>
     </footer>
 
-    <!-- Video Modal -->
-    <div id="videoModal" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <!-- Close Button -->
-      <button id="closeModalBtn" class="fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900 shadow-2xl backdrop-blur-md transition-all duration-200 hover:bg-white hover:scale-110 active:scale-95" aria-label="Close video" title="Close">
+    
+
+    <!-- Video Modal - FIRST -->
+    <div id="videoModal-first" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
+      <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      
-      <!-- Video Player - 80% screen height, fully responsive -->
-      <video id="modalVideo" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
+
+      <video id="modalVideo-first" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
         <source src="assets/testimonial/first.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
+    <!-- Video Modal - FIRST -->
+    <div id="videoModal-second" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
+      <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <video id="modalVideo-second" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
+        <source src="assets/testimonial/second.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Video Modal - FIRST -->
+    <div id="videoModal-third" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
+      <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <video id="modalVideo-third" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
+        <source src="assets/testimonial/third.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
     <script>
-      // Video Modal Functions
-      function openVideoModal() {
-        const modal = document.getElementById('videoModal');
-        const video = document.getElementById('modalVideo');
-        modal.classList.remove('hidden');
-        setTimeout(() => {
-          modal.classList.add('show');
-          // Lock viewport height
-          document.documentElement.style.height = '100vh';
-          document.documentElement.style.overflow = 'hidden';
-          document.body.style.height = '100vh';
-          document.body.style.overflow = 'hidden';
-        }, 10);
-        video.play().catch(e => console.log('Autoplay prevented:', e));
-      }
-
-      function closeVideoModal() {
-        const modal = document.getElementById('videoModal');
-        const video = document.getElementById('modalVideo');
-        modal.classList.remove('show');
-        video.pause();
-        video.currentTime = 0;
-        // Reset viewport height
-        document.documentElement.style.height = '';
-        document.documentElement.style.overflow = '';
-        document.body.style.height = '';
-        document.body.style.overflow = '';
-        setTimeout(() => {
-          modal.classList.add('hidden');
-        }, 300);
-      }
-
-      // Event Listeners
-      document.addEventListener('DOMContentLoaded', function() {
-        const modal = document.getElementById('videoModal');
-        const closeBtn = document.getElementById('closeModalBtn');
-        const video = document.getElementById('modalVideo');
-
-        // Close on backdrop click
-        modal.addEventListener('click', function(e) {
-          if (e.target === modal) closeVideoModal();
-        });
-
-        // Close button
-        closeBtn.addEventListener('click', closeVideoModal);
-
-        // ESC key
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-            closeVideoModal();
-          }
-        });
-
-        // Keyboard navigation for play button
-        const playBtn = document.querySelector('.testimonial-play');
-        playBtn.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openVideoModal();
-          }
-        });
-      });
-
+      
       const anchors = document.querySelectorAll('.pixel-anchor');
       const rows = 2, cols = 7, pixelColor = '#16484B';
 
@@ -1330,6 +1315,86 @@
             t.style.transitionDelay = `${Math.random() * 250}ms`;
             t.classList.remove('opacity-100', 'scale-[1.2]');
           });
+        });
+      });
+
+
+      function openVideoModal(name) {
+        const modal = document.getElementById(`videoModal-${name}`);
+        const video = document.getElementById(`modalVideo-${name}`);
+        if (!modal || !video) return;
+
+        // Hide any other open modals and pause their videos
+        document.querySelectorAll('[id^="videoModal-"]').forEach(m => {
+          if (m !== modal) {
+            m.classList.remove('show');
+            m.classList.add('hidden');
+            const vid = m.querySelector('video');
+            if (vid) { vid.pause(); vid.currentTime = 0; }
+          }
+        });
+
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.add('show'), 10);
+
+        // Lock scroll
+        document.documentElement.style.height = '100vh';
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.height = '100vh';
+        document.body.style.overflow = 'hidden';
+
+        // Try to play (muted in-card; modal can be unmuted if user wants)
+        video.play().catch(() => {});
+      }
+
+      function closeVideoModal(name) {
+        // If name provided, close that modal; otherwise close any open modal
+        const modals = name ? [document.getElementById(`videoModal-${name}`)] : Array.from(document.querySelectorAll('[id^="videoModal-"]'));
+        modals.forEach(modal => {
+          if (!modal) return;
+          modal.classList.remove('show');
+          const vid = modal.querySelector('video');
+          if (vid) { vid.pause(); vid.currentTime = 0; }
+          setTimeout(() => modal.classList.add('hidden'), 300);
+        });
+
+        // Reset scroll lock
+        document.documentElement.style.height = '';
+        document.documentElement.style.overflow = '';
+        document.body.style.height = '';
+        document.body.style.overflow = '';
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Attach click/keyboard to all play buttons
+        document.querySelectorAll('.testimonial-play').forEach(btn => {
+          const name = btn.dataset.modal;
+          if (!name) return;
+          btn.addEventListener('click', () => openVideoModal(name));
+          btn.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openVideoModal(name);
+            }
+          });
+        });
+
+        // Attach close handlers for each modal's close button and backdrop
+        document.querySelectorAll('[id^="videoModal-"]').forEach(modal => {
+          const name = modal.id.replace('videoModal-', '');
+          // Close button inside modal
+          const closeBtn = modal.querySelector('.closeModalBtn');
+          if (closeBtn) closeBtn.addEventListener('click', () => closeVideoModal(name));
+
+          // Backdrop click: close when clicking directly on modal container (not the video)
+          modal.addEventListener('click', e => {
+            if (e.target === modal) closeVideoModal(name);
+          });
+        });
+
+        // ESC key closes any open modal
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape') closeVideoModal();
         });
       });
     </script>
