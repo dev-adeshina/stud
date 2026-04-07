@@ -52,6 +52,8 @@
               body: ["Manrope", "sans-serif"],
               display: ["Sora", "sans-serif"],
               inter: ["Inter", "sans-serif"],
+              roboto: ["Roboto Mono", "monospace"],
+              sora: ["Sora", "sans-serif"],
             },
             boxShadow: {
               soft: "0 22px 60px rgba(10, 38, 39, 0.08)",
@@ -78,8 +80,18 @@
 
       @layer components {
         .font-inter { font-family: "Inter", sans-serif; }
+        .font-roboto { font-family: "Roboto Mono", "monospace"; }
         .anchor-text {
-          @apply font-inter font-bold text-[16px] text-[#16484B] px-4 leading-[24px] tracking-[0px] align-middle;
+          @apply font-inter font-semibold text-[16px] text-[#16484B] px-4 leading-[24px] tracking-[0px] align-middle;
+        }
+        .anchor-nav {
+          @apply font-roboto font-normal text-[14px] leading-[14px] px-6 tracking-[0px] align-middle uppercase;
+
+
+        }
+        .font-sora { font-family: "Sora", sans-serif; }
+        .display-md-semibold {
+          @apply font-semibold text-[20px] leading-[28px] tracking-tight; 
         }
         .shell {
           @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
@@ -350,12 +362,12 @@
           </a>
 
           <div class="hidden items-center gap-2 md:flex">
-            <a href="#home" class="nav-link nav-link-active">HOME</a>
-            <a href="#services" class="nav-link">ABOUT US</a>
-            <a href="#destinations" class="nav-link">DESTINATION</a>
-            <a href="#resources" class="nav-link">FREE RESOURCES</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            <a href="#blog" class="nav-link">BLOG</a>
+            <a href="#home" class="nav-link anchor-nav nav-link-active">HOME</a>
+            <a href="#services" class="nav-link anchor-nav">ABOUT US</a>
+            <a href="#destinations" class="nav-link anchor-nav">DESTINATION</a>
+            <a href="#resources" class="nav-link anchor-nav">FREE RESOURCES</a>
+            <a href="#faq" class="nav-link anchor-nav">FAQ</a>
+            <a href="#blog" class="nav-link anchor-nav">BLOG</a>
           </div>
 
           <div class="flex items-center gap-3">
@@ -466,9 +478,9 @@
                 </div>
                 
               </a>
-              <a href="#apply"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#E2C065]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#16484b]/40">
+              <a href="#apply"  class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#E2C065]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#16484b]/40">
       
-                <div class="pixel-grid absolute inset-0 grid pointer-events-none">
+                <div class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
                   </div>
 
                 <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-black">
@@ -659,27 +671,21 @@
               <p class="eyebrow">Global Reach</p>
               <h2 class="section-title mt-4">Top Study Destinations</h2>
             </div>
-            <!-- <a
-              href="#apply"
-              class="inline-flex h-11 w-fit items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border-2 border-brand-700 pl-4 pr-2 text-sm font-semibold text-brand-700 hover:bg-brand-700 hover:text-white transition-all duration-300 sm:min-w-[236px]"
-            >
-              <span>View All Destinations</span>
-              <i class="fa-solid fa-arrow-right cta-arrow"></i>
-            </a> -->
+            
 
-            <a href="#destinations"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+            <a href="#apply"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#16484B]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#E2C065]/40">
     
                 <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
                   </div>
 
-                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-black">
+                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
                   View All Destinations
                 </span>
 
-                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5xp] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                    class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
@@ -755,7 +761,7 @@
         </section>
         <section class="shell py-16 md:py-24">
           <div>
-            <h2 class="testimonial-section-heading">We’re proud of our success stories</h2>
+            <h2 class="testimonial-section-heading display-md-semibold">We’re proud of our success stories</h2>
             <p class="testimonial-section-copy">
               Hear from some of our amazing students we have helped.
             </p>
@@ -943,19 +949,19 @@
 
                 <div class="sm:col-span-2 pt-3 mx-auto">
 
-                  <button type="submit"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+                  <button type="submit"  class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#16484B] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
     
-                    <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
+                    <div  class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
                       </div>
 
-                    <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-black">
+                    <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-[#16484B]">
                       Submit Application
                     </span>
 
-                    <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+                    <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-[5xp] transition-all duration-500 group-hover:bg-[#16484B] hover:-translate-y-1 hover:scale-110">
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
-                        class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                        class="w-5 h-5 text-[#16484B] transition-transform duration-500 group-hover:text-[#E2C065]" 
                         viewBox="0 0 24 24" 
                         fill="none" 
                         stroke="currentColor" 
@@ -968,13 +974,7 @@
                       </svg>
                     </div>
                     
-                  </button>
-                  <!-- <button type="submit" class="inline-flex h-11 items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border border-brand-900/50 bg-gradient-to-r from-accent-400/90 to-accent-500 w-[60%] mx-auto pl-4 pr-6 text-sm font-bold text-brand-900 shadow-lg backdrop-blur-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <span>Submit Application</span>
-                    <i class="fa-solid fa-arrow-right cta-arrow"></i>
-                  </button> -->
-
-                  
+                  </button>                  
                 </div>
               </form>
             </div>
@@ -989,28 +989,21 @@
                 make informed study abroad decisions.
               </p>
             </div>
-            <!-- <a
-              id="resources"
-              href="#home"
-              class="inline-flex h-11 w-fit items-center justify-between gap-4 whitespace-nowrap rounded-[8px] border-2 border-brand-700 pl-4 pr-2 text-sm font-semibold text-brand-700 hover:bg-brand-700 hover:text-white transition-all duration-300 sm:min-w-[236px]"
-            >
-              <span>Explore All Resources</span>
-              <i class="fa-solid fa-arrow-right cta-arrow"></i>
-            </a> -->
+            
 
-            <a href="#home"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-6 overflow-hidden bg-transparent border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+            <a href="#home"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#16484B]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#E2C065]/40">
     
               <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
                 </div>
 
-              <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-black">
+              <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
                 Explore All Resources
               </span>
 
-              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#dbeafe] rounded-md transition-all duration-500 group-hover:bg-white">
+              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5xp] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  class="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-45" 
+                  class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
                   viewBox="0 0 24 24" 
                   fill="none" 
                   stroke="currentColor" 
@@ -1306,6 +1299,39 @@
         });
       });
 
+
+      const secondary_anchors = document.querySelectorAll('.secondary-pixel-anchor');
+      const secondary_rows = 2, secondary_cols = 7, secondary_pixelColor = '#E2C065';
+
+      secondary_anchors.forEach(anchor => {
+        const grid = anchor.querySelector('.secondary-pixel-grid'); // per-anchor grid
+        grid.style.gridTemplateColumns = `repeat(${secondary_cols}, 1fr)`;
+        grid.style.gridTemplateRows = `repeat(${secondary_rows}, 1fr)`;
+
+        const tiles = [];
+        for (let i = 0; i < secondary_rows * secondary_cols; i++) {
+          const tile = document.createElement('div');
+          tile.style.backgroundColor = secondary_pixelColor;
+          tile.className = 'w-full h-full opacity-0 transition-all duration-300 ease-in-out scale-0';
+          tile.style.transitionDelay = `${Math.random() * 400}ms`;
+          grid.appendChild(tile);
+          tiles.push(tile);
+        }
+
+        
+        anchor.addEventListener('mouseenter', () => {
+          tiles.forEach(t => {
+            t.style.transitionDelay = `${Math.random() * 350}ms`;
+            t.classList.add('opacity-100', 'scale-[1.2]');
+          });
+        });
+        anchor.addEventListener('mouseleave', () => {
+          tiles.forEach(t => {
+            t.style.transitionDelay = `${Math.random() * 250}ms`;
+            t.classList.remove('opacity-100', 'scale-[1.2]');
+          });
+        });
+      });
     </script>
   </body>
 </html>
