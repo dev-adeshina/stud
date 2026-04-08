@@ -241,10 +241,11 @@
         }
 
         .testimonial-play {
-          @apply absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-brand-800 shadow-soft cursor-pointer hover:scale-110 transition-transform duration-200;
+          @apply absolute  left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-brand-800 shadow-soft cursor-pointer hover:scale-110 transition-transform duration-200;
         }
 
         
+
         /* Modal Styles */
         #videoModal {
           opacity: 0;
@@ -328,6 +329,7 @@
         .logo-marquee:hover .logo-marquee-track {
           animation-play-state: paused;
         }
+
       }
 
       @keyframes logo-marquee-scroll {
@@ -768,7 +770,7 @@
             </p>
 
             <div class="testimonial-grid">
-              <article class="testimonial-card">
+              <article class="testimonial-card group">
                   <video
                   src="assets/testimonial/first.mp4"
                   alt="Video testimonial"
@@ -776,7 +778,7 @@
                   muted
                   playsinline
                 ></video>
-                <span class="testimonial-play" data-modal="first" role="button" tabindex="0" title="Play video">
+                <span class="testimonial-play opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200" data-modal="first" role="button" tabindex="0" title="Play video">
                   <i class="fa-solid fa-play"></i>
                 </span>
                 <div class="testimonial-overlay">
@@ -789,11 +791,11 @@
                   </div>
                   <p class="testimonial-name">Toyosi</p>
                   <p class="testimonial-school">University of Northumbria</p>
-                  <p class="testimonial-country">UK</p>
+                  <p class="testimonial-country pb-2">UK</p>
                 </div>
               </article>
 
-              <article class="testimonial-card">
+              <article class="testimonial-card group">
                 <video
                   src="assets/testimonial/second.mp4"
                   alt="Video testimonial"
@@ -801,7 +803,7 @@
                   muted
                   playsinline
                 ></video>
-                <span class="testimonial-play" data-modal="second" role="button" tabindex="0" title="Play video">
+                <span class="testimonial-play opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200" data-modal="second" role="button" tabindex="0" title="Play video">
                   <i class="fa-solid fa-play"></i>
                 </span>
                 <div class="testimonial-overlay">
@@ -814,11 +816,11 @@
                   </div>
                   <p class="testimonial-name">Deborah</p>
                   <p class="testimonial-school">University of Lancashire</p>
-                  <p class="testimonial-country">UK</p>
+                  <p class="testimonial-country pb-2">UK</p>
                 </div>
               </article>
 
-              <article class="testimonial-card">
+              <article class="testimonial-card group">
                 <video
                   src="assets/testimonial/third.mp4"
                   alt="Video testimonial"
@@ -826,7 +828,7 @@
                   muted
                   playsinline
                 ></video>
-                <span class="testimonial-play" data-modal="third" role="button" tabindex="0" title="Play video">
+                <span class="testimonial-play opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200" data-modal="third" role="button" tabindex="0" title="Play video">
                   <i class="fa-solid fa-play"></i>
                 </span>
                 <div class="testimonial-overlay">
@@ -839,7 +841,7 @@
                   </div>
                   <p class="testimonial-name">Ayomide</p>
                   <p class="testimonial-school">University of Sunderland</p>
-                  <p class="testimonial-country">Canada</p>
+                  <p class="testimonial-country pb-2">Canada</p>
                 </div>
               </article>
             </div>
