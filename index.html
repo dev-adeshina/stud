@@ -93,6 +93,25 @@
         .display-md-semibold {
           @apply font-semibold text-[20px] leading-[28px] tracking-tight; 
         }
+
+        .contact-title {
+          @apply text-[#E2C065] font-inter font-normal text-[16px] leading-[24px] tracking-[0px];
+        }
+
+        .contact-text {
+          @apply text-[#94979C] font-inter font-normal text-[16px] leading-[25px] tracking-[0px];
+
+        }
+
+        .quick-link-text {
+          @apply text-[#CECFD2] font-inter font-normal text-[16px] leading-[24px] tracking-[0px];
+
+        }
+
+        .footer-cta {
+          @apply font-inter text-[#94A3B8] font-normal text-[14px] leading-[22.75px] tracking-[0px];
+        }
+
         .shell {
           @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
         }
@@ -1124,7 +1143,7 @@
         <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-2 xl:grid-cols-[1fr_0.85fr_0.8fr_1.35fr]">
           <div>
             <div class="flex items-center gap-3">
-              <span
+              <!-- <span
                 class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-accent-300"
               >
                 <i class="fa-solid fa-earth-africa text-lg"></i>
@@ -1134,42 +1153,59 @@
                 <span class="block text-[10px] uppercase tracking-[0.36em] text-white/60"
                   >Education Consult</span
                 >
-              </span>
+              </span> -->
+              <a href="#home" class="flex items-center gap-3">
+                <img src="assets/Logo_footer.png" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />
+              </a>
             </div>
-            <p class="mt-6 max-w-sm text-sm leading-7 text-white/65">
-              Helping students make confident international education decisions with
-              expert guidance and practical support.
+            <p class="mt-6 max-w-sm footer-cta ">
+              Nigeria's most trusted education
+              consultancy, bridging the gap between
+              local talent and global opportunities.
             </p>
           </div>
 
           <div>
             <h3 class="font-display text-lg">Contact</h3>
             <div class="mt-5 space-y-3 text-sm text-white/70">
-              <p><span class="font-semibold text-white">Office:</span> 12 Allen Avenue, Ikeja, Lagos State</p>
-              <p><span class="font-semibold text-white">Phone:</span> +234 802 777 1314</p>
-              <p><span class="font-semibold text-white">Email:</span> info@studyguide.edu.ng</p>
+              <p class="contact-text">
+                <span class="font-semibold contact-title">Office Address</span>
+                <br />
+                Shop 1MS FAAN complex beside FAAN staff quarters, Ikeja along Lagos State
+              </p>
+              <p class="contact-text">
+                <span class="font-semibold contact-title">Phone</span>
+                <br /> 
+                +234 913 307 1334
+              </p>
+              <p class="contact-text">
+                <span class="font-semibold contact-title">Email</span>
+                <br /> 
+                Info@studyglideedu.com
+              </p>
             </div>
           </div>
 
           <div>
             <h3 class="font-display text-lg">Quick Links</h3>
             <div class="mt-5 space-y-3">
-              <a href="#services" class="footer-link block">About us</a>
-              <a href="#destinations" class="footer-link block">Destinations</a>
-              <a href="#faq" class="footer-link block">FAQ</a>
-              <a href="#blog" class="footer-link block">Blog</a>
-              <a href="#resources" class="footer-link block">Resources</a>
+              <a href="#services" class="quick-link-text">About us</a>
+              <a href="#destinations" class="quick-link-text block">Contact Us</a>
+              <a href="#faq" class="quick-link-text block">FAQ</a>
+              <a href="#blog" class="quick-link-text block">Blog</a>
+              <a href="#blog" class="quick-link-text block">Blog Post</a>
+              <a href="#resources" class="quick-link-text block">Scholarship</a>
             </div>
           </div>
 
           <div>
             <h3 class="font-display text-lg">Stay up to date</h3>
-            <p class="mt-5 max-w-[48ch] text-sm leading-7 text-white/65">
+            <p class="mt-5 max-w-[48ch] contact-text">
               Study abroad news and opportunities, first access to new intakes, and
               practical planning tips delivered monthly.
             </p>
             <form class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-stretch">
-              <input type="email" class="footer-subscribe-input form-field min-w-0 flex-1 border-white/15 bg-white text-slate-900 sm:min-w-[280px]" placeholder="Enter your email" />
+              <input type="email" class="footer-subscribe-input form-field min-w-0 flex-1 border-white/15 bg-white text-slate-900 sm:min-w-[260px]" placeholder="Enter your email" />
              
               <button type="submit"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
     
@@ -1201,15 +1237,15 @@
           </div>
         </div>
 
-        <div class="flex flex-col gap-4 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
-          <p>&copy; 2026 StudyGuide. All rights reserved.</p>
+        <div class="flex flex-col gap-4 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between contact-text">
+          <p>&copy; <script>document.write(new Date().getFullYear())</script> StudyGlide. All rights reserved.</p>
           <div class="flex items-center gap-5 text-base">
             <a href="#" aria-label="X" class="transition hover:text-accent-200"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="#" aria-label="LinkedIn" class="transition hover:text-accent-200"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="#" aria-label="Instagram" class="transition hover:text-accent-200"><i class="fa-brands fa-instagram"></i></a>
             <a href="#" aria-label="Facebook" class="transition hover:text-accent-200"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
-          <p>Design by JayintopStudio.</p>
+          <p>Design by <span class="underline underline-offset-4">JayintopStudio</span></p>
         </div>
       </div>
     </footer>
@@ -1253,7 +1289,7 @@
     </div>
 
     <script>
-      
+
       const anchors = document.querySelectorAll('.pixel-anchor');
       const rows = 2, cols = 7, pixelColor = '#16484B';
 
@@ -1399,6 +1435,8 @@
           if (e.key === 'Escape') closeVideoModal();
         });
       });
+
+      
     </script>
   </body>
 </html>
