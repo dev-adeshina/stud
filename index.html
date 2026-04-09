@@ -79,19 +79,20 @@
       }
 
       @layer components {
+
         .font-inter { font-family: "Inter", sans-serif; }
         .font-roboto { font-family: "Roboto Mono", "monospace"; }
         .anchor-text {
-          @apply font-inter font-semibold text-[16px] text-[#16484B] px-4 leading-[24px] tracking-[0px] align-middle;
+          @apply font-inter font-semibold text-sm sm:text-base lg:text-[16px] text-slate-900 px-3 sm:px-4 lg:px-4 leading-tight sm:leading-[24px] tracking-[0px] align-middle;
         }
+
         .anchor-nav {
-          @apply font-roboto font-normal text-[14px] leading-[14px] px-6 tracking-[0px] align-middle uppercase;
-
-
+          @apply font-roboto font-normal text-xs sm:text-sm px-3 sm:px-4 lg:px-6 leading-tight tracking-[0.1em] align-middle uppercase;
         }
         .font-sora { font-family: "Sora", sans-serif; }
+
         .display-md-semibold {
-          @apply font-semibold text-[20px] leading-[28px] tracking-tight; 
+          @apply font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight tracking-tight; 
         }
 
         .contact-title {
@@ -113,7 +114,7 @@
         }
 
         .shell {
-          @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+          @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0;
         }
 
         .eyebrow {
@@ -125,7 +126,7 @@
         }
 
         .section-title {
-          @apply font-display font-semibold text-4xl leading-[1.1] tracking-[-0.02em] text-[#181D27] md:text-5xl;
+          @apply font-display font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-0.02em] text-slate-900;
         }
 
         .cta-wide {
@@ -190,7 +191,7 @@
         }
 
         .destination-card {
-          @apply relative isolate flex w-full max-w-[280px] min-h-[432px] flex-col justify-end overflow-hidden border border-sky-300/40 bg-brand-900 shadow-card;
+          @apply relative isolate flex w-full sm:max-w-sm lg:max-w-md min-h-[350px] sm:min-h-[400px] lg:min-h-[432px] flex-col justify-end overflow-hidden border border-sky-300/40 bg-brand-900 shadow-card;
         }
 
         .destination-card::after {
@@ -215,22 +216,30 @@
         }
 
         .testimonial-section-heading {
-          @apply font-display text-[2.75rem] leading-[1.08] text-slate-900 md:text-[3.25rem];
+          @apply font-display text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] leading-[1.08] text-slate-900;
         }
 
         .testimonial-section-copy {
-          @apply mt-5 max-w-xl font-body text-[1.375rem] leading-9 tracking-normal text-slate-500;
+          @apply mt-5 max-w-xl font-body text-lg sm:text-xl md:text-[1.375rem] leading-7 sm:leading-8 md:leading-9 tracking-normal text-slate-500;
         }
 
         .testimonial-grid {
-          @apply mt-12 grid gap-6 lg:grid-cols-3;
+          @apply mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8;
         }
 
-        .testimonial-card {
+        /* .testimonial-card {
           @apply relative overflow-hidden bg-slate-100;
-          width: 384px;
-          height: 480px;
+          width: 100%;
+          height: 14rem sm:16rem md:20rem lg:24rem;
+        } */
+
+        .testimonial-card {
+          @apply relative overflow-hidden bg-slate-100 w-full;
         }
+        .testimonial-card { height: 14rem; } /* base */
+        @screen sm { .testimonial-card { height: 16rem; } }
+        @screen md { .testimonial-card { height: 20rem; } }
+        @screen lg { .testimonial-card { height: 24rem; } }
 
         .testimonial-card img,
         .testimonial-card video {
@@ -377,13 +386,13 @@
       <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50"></div>
       <div class="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-brand-700/60 to-transparent lg:block"></div>
 
-      <header class="relative z-10 mx-auto w-[70%] px-4 pt-3 sm:px-6 lg:px-8">
-        <nav class="flex items-center justify-between gap-6">
+<div class="shell pt-3 sm:pt-4 lg:pt-6">
+        <nav class="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8">
           <a href="#" class="flex shrink-0 items-center">
             <img src="assets/logo.svg" alt="StudyGuide logo" class="block h-10 w-auto md:h-11" />
           </a>
 
-          <div class="hidden items-center gap-2 md:flex">
+          <div class="hidden lg:flex items-center gap-2 lg:gap-4 xl:gap-6">
             <a href="#home" class="nav-link anchor-nav nav-link-active">HOME</a>
             <a href="#services" class="nav-link anchor-nav">ABOUT US</a>
             <a href="#destinations" class="nav-link anchor-nav">DESTINATION</a>
@@ -394,7 +403,7 @@
 
           <div class="flex items-center gap-3">
 
-            <a href="#apply"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+<a class="pixel-anchor group relative inline-flex items-center h-11 justify-between w-full sm:min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
     
               <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
                 </div>
@@ -427,7 +436,7 @@
               >
                 <i class="fa-solid fa-bars"></i>
               </summary>
-              <div class="absolute right-0 top-14 z-20 w-56 border border-white/10 bg-brand-900/95 p-5 shadow-card">
+              <div class="absolute right-0 top-full mt-2 z-20 w-full sm:w-72 border border-white/10 bg-brand-900/95 p-6 sm:p-5 shadow-card rounded-lg">
                 <div class="space-y-4 text-sm font-medium text-white/80">
                   <a href="#home" class="block hover:text-white">HOME</a>
                   <a href="#services" class="block hover:text-white">ABOUT US</a>
@@ -451,7 +460,7 @@
         </nav>
       </header>
 
-      <div id="home" class="relative z-10 mx-auto w-[70%] px-4 pb-24 pt-16 sm:px-6 md:pb-28 md:pt-20 lg:px-8">
+<div class="shell pb-20 sm:pb-24 md:pb-28 pt-12 sm:pt-16 md:pt-20">
         <div class="grid grid-cols-1 items-center gap-12">
           <div class="w-full">
             <div
@@ -460,21 +469,21 @@
               <i class="fa-solid fa-star text-[10px]"></i>
               Visa Processing | IELTS Prep | Admissions
             </div>
-            <div class="w-[80%]"> 
-              <h1 class="font-display text-[2rem] font-medium leading-[1.1] tracking-[-0.02em] text-white md:text-[60px] md:leading-[72px]">
+<div class="w-full lg:w-3/4"> 
+              <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-[-0.02em] text-white md:leading-[1.1] lg:leading-[1.15]">
                 Your Global Education <span class="inline-block whitespace-nowrap font-inter text-[2rem] font-medium leading-[1.1] tracking-[-0.02em] text-white underline decoration-white decoration-[2px] underline-offset-[6px] md:text-[60px] md:leading-[72px] md:decoration-[3px] md:underline-offset-[10px]">StudyGuide</span>
                 <br />
                 Starts Here.
               </h1>
             </div>
             
-            <p class="w-[60%] mt-6 max-w-lg font-body text-xl font-normal leading-8 tracking-normal text-white/75">
+            <p class="mt-6 max-w-lg sm:max-w-xl lg:max-w-2xl font-body text-lg sm:text-xl md:text-2xl font-normal leading-7 sm:leading-8 md:leading-relaxed tracking-normal text-white/80">
               Expert guidance for Nigerian students ready to study in the UK, USA,
               Canada, and beyond. We simplify the journey from application to
               arrival so your next move feels certain.
             </p>
 
-            <div class="mt-10 flex flex-wrap items-center gap-5">
+<div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 lg:gap-6">
               <a href="#destinations" class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
     
                 <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
@@ -501,7 +510,7 @@
                 </div>
                 
               </a>
-              <a href="#apply"  class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#E2C065]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#16484b]/40">
+<a class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between w-full sm:min-w-[200px] md:min-w-[236px] px-2 overflow-hidden bg-transparent border border-[#E2C065]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#16484b]/40">
       
                 <div class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
                   </div>
@@ -535,7 +544,7 @@
             <img
               src="assets/hero-header-section.png"
               alt="Smiling international student in a hallway"
-              class="h-[540px] w-full object-cover object-center"
+class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-center"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/10 to-transparent"></div>
           </div>
@@ -548,8 +557,8 @@
     </section>
 
     <main>
-      <div class="mx-auto w-[80%]">
-        <section class="shell py-16 md:py-20">
+      <div class="shell">
+        <section class="py-16 md:py-20">
           <div class="text-center">
             <p class="text-sm font-medium uppercase tracking-[0.3em] text-slate-400">
               Trusted by 4,000+ international learners
@@ -636,13 +645,13 @@
             </div>
           </div>
         </section>
-        <section id="services" class="shell py-12 md:py-16">
+<div class="py-12 sm:py-16 md:py-20">
           <div class="max-w-2xl">
             <p class="eyebrow">Our Expertise</p>
             <h2 class="section-title mt-4">Comprehensive Services</h2>
           </div>
 
-          <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <article class="service-card border-transparent">
               <span class="icon-chip">
                 <i class="fa-solid fa-building-columns"></i>
@@ -705,7 +714,7 @@
                   View All Destinations
                 </span>
 
-                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5xp] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
+              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5px] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
@@ -724,7 +733,7 @@
               </a>
           </div>
 
-          <div class="mt-12 grid justify-items-center gap-6 md:grid-cols-2 xl:grid-cols-4">
+mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 justify-items-center
             <article class="group destination-card">
               <img
                 src="assets/country/uk.png"
@@ -782,9 +791,9 @@
             </article>
           </div>
         </section>
-        <section class="shell py-16 md:py-24">
+class="py-16 sm:py-20 md:py-24 lg:py-28"
           <div>
-            <h2 class="testimonial-section-heading display-md-semibold">We’re proud of our success stories</h2>
+            <h2 class="testimonial-section-heading display-md-semibold">We're proud of our success stories</h2>
             <p class="testimonial-section-copy">
               Hear from some of our amazing students we have helped.
             </p>
@@ -876,23 +885,23 @@
             </div>
           </div>
         </section>
-        <section id="apply" class="shell py-16 md:py-20">
+id="apply" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
           <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
             <div class="overflow-hidden shadow-card my-16">
               <img
                 src="assets/form-girl.jpg"
                 alt="Prospective student holding books"
-                class="h-full min-h-[768px] min-w[576px] w-full object-cover"
+class="w-full h-64 sm:h-80 md:h-96 lg:min-h-[500px] object-cover object-center"
               />
             </div>
 
-            <div class="max-w-xl ">
-              <h2 class="section-title px-8">Start your study abroad journey here</h2>
-              <p class="mt-4 font-body font-normal text-xl leading-[1.75] tracking-normal text-slate-600 px-8">
+                <div class="max-w-xl">
+  <h2 class="section-title px-4 sm:px-6 lg:px-8">Start your study abroad journey here</h2>
+              <p class="mt-4 font-body font-normal text-lg sm:text-xl leading-[1.75] tracking-normal text-slate-600 px-4 sm:px-6 lg:px-8">
                 Fill the aplication form below
               </p>
 
-              <form class="mt-8 grid gap-4 sm:grid-cols-2 px-8">
+<form class="mt-8 grid gap-4 sm:gap-6 sm:grid-cols-2 px-4 sm:px-6 lg:px-8">
                 <div class="sm:col-span-2">
                   <label for="full-name" class="mb-2 block text-sm font-semibold text-slate-800">Full Name*</label>
                   <input id="full-name" type="text" class="form-field" placeholder="Your full name" />
@@ -973,18 +982,16 @@
                 </div>
 
                 <div>
-                  <label for="budget" class="mb-2 block text-sm font-semibold text-slate-800">Any previous visa refusal?*</label>
-                  <select id="budget" class="form-field">
-                    <option>A friend How did you hear about us?</option>
-                    <option>Instagram</option>
-                    <option>Referral partner</option>
-                    <option>Google search</option>
+  <label for="visa-refusal" class="mb-2 block text-sm font-semibold text-slate-800">Any previous visa refusal?*</label>
+                  <select id="visa-refusal" class="form-field">
+                    <option>No</option>
+                    <option>Yes</option>
                   </select>
                 </div>
 
                 <div>
-                  <label for="budget" class="mb-2 block text-sm font-semibold text-slate-800">How did you hear about us?*</label>
-                  <select id="budget" class="form-field">
+                  <label for="how-heard" class="mb-2 block text-sm font-semibold text-slate-800">How did you hear about us?*</label>
+                  <select id="how-heard" class="form-field">
                     <option>A friend</option>
                     <option>Instagram</option>
                     <option>Referral partner</option>
@@ -1003,7 +1010,7 @@
                       Submit Application
                     </span>
 
-                    <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-[5xp] transition-all duration-500 group-hover:bg-[#16484B] hover:-translate-y-1 hover:scale-110">
+                    <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-[5px] transition-all duration-500 group-hover:bg-[#16484B] hover:-translate-y-1 hover:scale-110">
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         class="w-5 h-5 text-[#16484B] transition-transform duration-500 group-hover:text-[#E2C065]" 
@@ -1025,7 +1032,7 @@
             </div>
           </div>
         </section>
-        <section id="blog" class="shell py-16 md:py-20">
+id="blog" class="py-16 sm:py-20 md:py-24 lg:py-28">
           <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div class="max-w-2xl">
               <h2 class="section-title">Latest from our Blog</h2>
@@ -1045,7 +1052,7 @@
                 Explore All Resources
               </span>
 
-              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5xp] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
+              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5px] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
@@ -1064,7 +1071,7 @@
             </a>
           </div>
 
-          <div class="mt-12 grid gap-3 lg:grid-cols-3">
+mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8
             <article class="blog-card">
               <img
                 src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
@@ -1217,17 +1224,17 @@
                   Subscribe
                 </span>
 
-                <span class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5xp] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    stroke-width="2.5" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"
-                  >
+                <span class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5px] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="2.5" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                >
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
                   </svg>
