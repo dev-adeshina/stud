@@ -377,10 +377,11 @@
   </head>
   <body>
     <section class="relative isolate overflow-hidden bg-brand-800 text-white">
-      <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50"></div>
-      <div class="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-brand-700/60 to-transparent lg:block"></div>
+      <!-- <header>
+        <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50"></div>
+        <div class="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-brand-700/60 to-transparent lg:block"></div>
 
-<div class="shell pt-3 sm:pt-4 lg:pt-6">
+      <div class="shell pt-3 sm:pt-4 lg:pt-6">
         <nav class="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 lg:gap-8">
           <a href="#" class="flex shrink-0 items-center">
             <img src="assets/logo.svg" alt="StudyGuide logo" class="block h-10 w-auto md:h-11" />
@@ -397,62 +398,114 @@
 
           <div class="flex items-center gap-3">
 
-<a class="pixel-anchor group relative inline-flex items-center h-11 justify-between w-full sm:min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
-    
-              <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
+            <a class="pixel-anchor group relative inline-flex items-center h-11 justify-between w-full sm:min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
+      
+                <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
+                  </div>
+
+                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
+                  Get In Touch
+                </span>
+
+                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-md transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2.5" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
                 </div>
-
-              <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
-                Get In Touch
-              </span>
-
-              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-md transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  stroke-width="2.5" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round"
-                >
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </div>
-              
-            </a>
+                
+              </a>
             
-            <details class="relative md:hidden">
-              <summary
-                class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-[8px] border border-white/15 bg-white/10 text-white transition hover:bg-white/15"
-              >
-                <i class="fa-solid fa-bars"></i>
-              </summary>
-              <div class="absolute right-0 top-full mt-2 z-20 w-full sm:w-72 border border-white/10 bg-brand-900/95 p-6 sm:p-5 shadow-card rounded-lg">
-                <div class="space-y-4 text-sm font-medium text-white/80">
-                  <a href="#home" class="block hover:text-white">HOME</a>
-                  <a href="#services" class="block hover:text-white">ABOUT US</a>
-                  <a href="#destinations" class="block hover:text-white">DESTINATION</a>
-                  <a href="#resources" class="block hover:text-white">FREE RESOURCES</a>
-                  <a href="#faq" class="block hover:text-white">FAQ</a>
-                  <a href="#blog" class="block hover:text-white">BLOG</a>
-                  <a href="#apply" class="group relative flex h-[52px] w-full  items-center justify-center gap-4 overflow-hidden rounded-initial bg-[#E2C065] px-6 py-0 no-underline transition-opacity duration-300 hover:opacity-90" >
-                    <span class="text-sm font-medium text-white">Book A Session</span>
-                    <div class="relative flex h-5 w-5 items-center justify-center rounded-[2px] bg-[#98fe00]">
-                      <div class="h-2 w-2 bg-[#131313]"></div>
+              <details class="relative md:hidden">
+                <summary
+                  class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-[8px] border border-white/15 bg-white/10 text-white transition hover:bg-white/15"
+                >
+                  <i class="fa-solid fa-bars"></i>
+                </summary>
+                <div class="absolute right-0 top-full mt-2 z-20 w-full sm:w-72 border border-white/10 bg-brand-900/95 p-6 sm:p-5 shadow-card rounded-lg">
+                  <div class="space-y-4 text-sm font-medium text-white/80">
+                    <a href="#home" class="block hover:text-white">HOME</a>
+                    <a href="#services" class="block hover:text-white">ABOUT US</a>
+                    <a href="#destinations" class="block hover:text-white">DESTINATION</a>
+                    <a href="#resources" class="block hover:text-white">FREE RESOURCES</a>
+                    <a href="#faq" class="block hover:text-white">FAQ</a>
+                    <a href="#blog" class="block hover:text-white">BLOG</a>
+                    <a href="#apply" class="group relative flex h-[52px] w-full  items-center justify-center gap-4 overflow-hidden rounded-initial bg-[#E2C065] px-6 py-0 no-underline transition-opacity duration-300 hover:opacity-90" >
+                      <span class="text-sm font-medium text-white">Book A Session</span>
+                      <div class="relative flex h-5 w-5 items-center justify-center rounded-[2px] bg-[#98fe00]">
+                        <div class="h-2 w-2 bg-[#131313]"></div>
+                        
+                        <div class="absolute inset-0 bg-[#131313] opacity-0 blur-[5px] transition-opacity group-hover:opacity-100"></div>
+                      </div>
                       
-                      <div class="absolute inset-0 bg-[#131313] opacity-0 blur-[5px] transition-opacity group-hover:opacity-100"></div>
-                    </div>
-                    <!-- <i class="fa-solid fa-arrow-right cta-arrow"></i> -->
-                  </a>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </details>
+              </details>
           </div>
         </nav>
-      </header>
+      </header> -->
+
+      <header class="relative z-50"> <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50 pointer-events-none"></div>
+    
+    <div class="shell pt-3 sm:pt-4 lg:pt-6">
+        <nav class="flex items-center justify-between gap-4">
+            <a href="#" class="flex shrink-0 items-center">
+                <img src="assets/logo.svg" alt="StudyGuide logo" class="h-10 w-auto md:h-11" />
+            </a>
+
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
+                <a href="#home" class="nav-link anchor-nav text-xs lg:text-sm font-bold">HOME</a>
+                <a href="#services" class="nav-link anchor-nav text-xs lg:text-sm font-bold">ABOUT US</a>
+                <a href="#destinations" class="nav-link anchor-nav text-xs lg:text-sm font-bold">SERVICES</a>
+                <a href="#resources" class="nav-link anchor-nav text-xs lg:text-sm font-bold">DESTINATION</a>
+                <a href="#faq" class="nav-link anchor-nav text-xs lg:text-sm font-bold">FAQ</a>
+                <a href="#blog" class="nav-link anchor-nav text-xs lg:text-sm font-bold">BLOG</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
+                    <span class="relative z-10 text-sm font-bold mr-10">Get In Touch</span>
+                    <div class="relative z-10 flex items-center justify-center w-7 h-7 ml-3 bg-[#16484b] rounded-md group-hover:bg-[#E2C065]">
+                        <svg class="w-4 h-4 text-[#E2C065] group-hover:text-[#16484b]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                </a>
+            
+                <details class="relative md:hidden group">
+                    <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/15">
+                        <i class="fa-solid fa-bars group-open:hidden"></i>
+                        <i class="fa-solid fa-xmark hidden group-open:block"></i>
+                    </summary>
+                    
+                    <div class="absolute right-0 top-full mt-4 z-50 w-[80vw] max-w-[300px] border border-white/10 bg-brand-900/98 p-6 shadow-2xl rounded-xl backdrop-blur-lg">
+                        <div class="flex flex-col gap-5 text-sm font-bold text-white/80">
+                            <a href="#home" class="hover:text-[#E2C065]">HOME</a>
+                            <a href="#services" class="hover:text-[#E2C065]">ABOUT US</a>
+                            <a href="#destinations" class="hover:text-[#E2C065]">DESTINATION</a>
+                            <a href="#resources" class="hover:text-[#E2C065]">RESOURCES</a>
+                            <a href="#faq" class="hover:text-[#E2C065]">FAQ</a>
+                            <a href="#blog" class="hover:text-[#E2C065]">BLOG</a>
+                            <hr class="border-white/10">
+                            <a href="#apply" class="w-full bg-[#E2C065] py-3 text-center text-brand-900 rounded-lg">Book A Session</a>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </nav>
+    </div>
+</header>
 
 <div class="shell pb-20 sm:pb-24 md:pb-28 pt-12 sm:pt-16 md:pt-20">
         <div class="grid grid-cols-1 items-center gap-12">
@@ -692,7 +745,7 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
         </section>
 
         <section id="destinations" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
-          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between my-2">
+          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between py-6">
             <div>
               <p class="eyebrow">Global Reach</p>
               <h2 class="section-title mt-4">Top Study Destinations</h2>
@@ -786,73 +839,6 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
           </div>
         </section>
 
-        <section id="destinations" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12 sm:mb-16">
-                <div class="max-w-2xl">
-                    <h2 class="section-title text-brand-900">Explore Top Destinations</h2>
-                    <p class="section-subtitle mt-4">Discover world-class universities in the most vibrant cities across the globe.</p>
-                </div>
-                <a href="#" class="text-brand-600 font-semibold hover:text-brand-700 transition-colors inline-flex items-center gap-2">
-                    View all destinations <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
-                
-                <article class="group relative w-full max-w-sm sm:max-w-none h-[432px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
-                    <img src="your-image.jpg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="UK">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                    
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-medium">250+ Universities</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">United Kingdom</h3>
-                        <p class="text-white/80 text-sm line-clamp-2">Study in historic cities with world-leading academic excellence.</p>
-                    </div>
-                </article>
-
-                <article class="group relative w-full max-w-sm sm:max-w-none h-[432px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
-                    <img src="your-image.jpg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="UK">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                    
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-medium">250+ Universities</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">United Kingdom</h3>
-                        <p class="text-white/80 text-sm line-clamp-2">Study in historic cities with world-leading academic excellence.</p>
-                    </div>
-                </article>
-
-                <article class="group relative w-full max-w-sm sm:max-w-none h-[432px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
-                    <img src="your-image.jpg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="UK">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                    
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-medium">250+ Universities</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">United Kingdom</h3>
-                        <p class="text-white/80 text-sm line-clamp-2">Study in historic cities with world-leading academic excellence.</p>
-                    </div>
-                </article>
-
-                <article class="group relative w-full max-w-sm sm:max-w-none h-[432px] rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 hover:-translate-y-2">
-                    <img src="your-image.jpg" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="UK">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                    
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-medium">250+ Universities</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">United Kingdom</h3>
-                        <p class="text-white/80 text-sm line-clamp-2">Study in historic cities with world-leading academic excellence.</p>
-                    </div>
-                </article>
-
-              </div>
-        </section>
         <section id="testimonial"  class="py-16 sm:py-20 md:py-24 lg:py-28">
           <div>
             <h2 class="testimonial-section-heading display-md-semibold">We're proud of our success stories</h2>
