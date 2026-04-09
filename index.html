@@ -230,10 +230,10 @@
         .testimonial-card {
           @apply relative overflow-hidden bg-slate-100 w-full;
         }
-        .testimonial-card { height: 14rem; } /* base */
-        @screen sm { .testimonial-card { height: 16rem; } }
-        @screen md { .testimonial-card { height: 20rem; } }
-        @screen lg { .testimonial-card { height: 24rem; } }
+        .testimonial-card { height: 20rem; } /* base */
+        @screen sm { .testimonial-card { height: 20rem; } }
+        @screen md { .testimonial-card { height: 24rem; } }
+        @screen lg { .testimonial-card { height: 30rem; } }
 
         .testimonial-card img,
         .testimonial-card video {
@@ -498,7 +498,7 @@
                             <a href="#faq" class="hover:text-[#E2C065]">FAQ</a>
                             <a href="#blog" class="hover:text-[#E2C065]">BLOG</a>
                             <hr class="border-white/10">
-                            <a href="#apply" class="w-full bg-[#E2C065] py-3 text-center text-brand-900 rounded-lg">Book A Session</a>
+                            <a href="#apply" class="w-full bg-[#E2C065] py-3 text-center text-brand-900 rounded-lg">Get In Touch</a>
                         </div>
                     </div>
                 </details>
@@ -530,58 +530,6 @@
             </p>
 
 <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 lg:gap-6">
-              <!-- <a href="#destinations" class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[236px] px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
-    
-                <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
-                  </div>
-
-                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
-                  Explore Destinations
-                </span>
-
-                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-md transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    stroke-width="2.5" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-                
-              </a>
-              <a class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between w-full sm:min-w-[200px] md:min-w-[236px] px-2 overflow-hidden bg-transparent border border-[#E2C065]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#16484b]/40">
-      
-                <div class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
-                  </div>
-
-                <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-black">
-                  Get Free Advice
-                </span>
-
-                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-md transition-all duration-500 group-hover:bg-[#16484b]">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-black transition-transform duration-500 group-hover:text-[#E2C065]" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    stroke-width="2.5" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-                
-              </a> -->
 
               <div class="flex flex-col sm:flex-row items-center gap-4 w-full max-w-2xl">
     
@@ -724,13 +672,15 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
             </div>
           </div>
         </section>
-<div class="py-12 sm:py-16 md:py-20">
+
+
+        <section class="py-12 sm:py-16 md:py-20">
           <div class="max-w-2xl">
             <p class="eyebrow">Our Expertise</p>
             <h2 class="section-title mt-4">Comprehensive Services</h2>
           </div>
 
-<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <article class="service-card border-transparent">
               <span class="icon-chip">
                 <i class="fa-solid fa-building-columns"></i>
@@ -969,149 +919,149 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
 
         <section id="apply" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
           <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
-            <div class="overflow-hidden shadow-card my-16">
-              <img
-                src="assets/form-girl.jpg"
-                alt="Prospective student holding books"
-class="w-full h-64 sm:h-80 md:h-96 lg:min-h-[500px] object-cover object-center"
-              />
-            </div>
+              <div class="overflow-hidden shadow-card my-16">
+                <img
+                  src="assets/form-girl.jpg"
+                  alt="Prospective student holding books"
+                  class="w-full h-64 sm:h-80 md:h-96 lg:min-h-[500px] object-cover object-center"
+                />
+              </div>
 
                 <div class="max-w-xl">
-  <h2 class="section-title px-4 sm:px-6 lg:px-8">Start your study abroad journey here</h2>
-              <p class="mt-4 font-body font-normal text-lg sm:text-xl leading-[1.75] tracking-normal text-slate-600 px-4 sm:px-6 lg:px-8">
-                Fill the aplication form below
-              </p>
+                  <h2 class="section-title px-4 sm:px-6 lg:px-8">Start your study abroad journey here</h2>
+                  <p class="mt-4 font-body font-normal text-lg sm:text-xl leading-[1.75] tracking-normal text-slate-600 px-4 sm:px-6 lg:px-8">
+                    Fill the aplication form below
+                  </p>
 
-<form class="mt-8 grid gap-4 sm:gap-6 sm:grid-cols-2 px-4 sm:px-6 lg:px-8">
-                <div class="sm:col-span-2">
-                  <label for="full-name" class="mb-2 block text-sm font-semibold text-slate-800">Full Name*</label>
-                  <input id="full-name" type="text" class="form-field" placeholder="Your full name" />
-                </div>
-
-                <div>
-                  <label for="age" class="mb-2 block text-sm font-semibold text-slate-800">Age*</label>
-                  <input id="age" type="number" class="form-field" placeholder="19" />
-                </div>
-
-                <div>
-                  <label for="phone" class="mb-2 block text-sm font-semibold text-slate-800">Phone Number*</label>
-                  <input id="phone" type="tel" class="form-field" placeholder="+234 800 000 0000" />
-                </div>
-
-                <div>
-                  <label for="state" class="mb-2 block text-sm font-semibold text-slate-800">Email*</label>
-                  <input id="state" type="text" class="form-field" placeholder="Lagos" />
-                </div>
-
-                <div>
-                  <label for="country" class="mb-2 block text-sm font-semibold text-slate-800">Gender*</label>
-                  <input id="country" type="text" class="form-field" placeholder="Nigeria" />
-                </div>
-
-                <div>
-                  <label for="destination" class="mb-2 block text-sm font-semibold text-slate-800">Preffered study destination*</label>
-                  <select id="destination" class="form-field">
-                    <option>UK</option>
-                    <option>Canada</option>
-                    <option>Ireland</option>
-                    <option>Australia</option>
-                    <option>USA</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="interview" class="mb-2 block text-sm font-semibold text-slate-800">Other countr(ies) interested in*</label>
-                  <select id="interview" class="form-field">
-                    <option>Have not done yet</option>
-                    <option>Completed</option>
-                    <option>Scheduled</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="level" class="mb-2 block text-sm font-semibold text-slate-800">Program interested in? *</label>
-                  <select id="level" class="form-field">
-                    <option>A Levels</option>
-                    <option>Foundation</option>
-                    <option>Undergraduate</option>
-                    <option>Postgraduate</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="year" class="mb-2 block text-sm font-semibold text-slate-800">Other programme interested in?*
-                  <select id="year" class="form-field">
-                    <option>2026 intake</option>
-                    <option>2027 intake</option>
-                    <option>Not sure yet</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="qualification" class="mb-2 block text-sm font-semibold text-slate-800">Highest qualification?*</label>
-                  <select id="qualification" class="form-field">
-                    <option>SSCE</option>
-                    <option>OND</option>
-                    <option>HND</option>
-                    <option>Bachelor's degree</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="question" class="mb-2 block text-sm font-semibold text-slate-800">Other qualification *</label>
-                  <input id="question" type="text" class="form-field" placeholder="Optional" />
-                </div>
-
-                <div>
-  <label for="visa-refusal" class="mb-2 block text-sm font-semibold text-slate-800">Any previous visa refusal?*</label>
-                  <select id="visa-refusal" class="form-field">
-                    <option>No</option>
-                    <option>Yes</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label for="how-heard" class="mb-2 block text-sm font-semibold text-slate-800">How did you hear about us?*</label>
-                  <select id="how-heard" class="form-field">
-                    <option>A friend</option>
-                    <option>Instagram</option>
-                    <option>Referral partner</option>
-                    <option>Google search</option>
-                  </select>
-                </div>
-
-                <div class="sm:col-span-2 pt-3 mx-auto">
-
-                  <button type="submit"  class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#16484B] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
-    
-                    <div  class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
-                      </div>
-
-                    <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-[#16484B]">
-                      Submit Application
-                    </span>
-
-                    <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-[5px] transition-all duration-500 group-hover:bg-[#16484B] hover:-translate-y-1 hover:scale-110">
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        class="w-5 h-5 text-[#16484B] transition-transform duration-500 group-hover:text-[#E2C065]" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        stroke-width="2.5" 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round"
-                      >
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
+                  <form class="mt-8 grid gap-4 sm:gap-6 sm:grid-cols-2 px-4 sm:px-6 lg:px-8">
+                    <div class="sm:col-span-2">
+                      <label for="full-name" class="mb-2 block text-sm font-semibold text-slate-800">Full Name*</label>
+                      <input id="full-name" type="text" class="form-field" placeholder="Your full name" />
                     </div>
-                    
-                  </button>                  
+
+                    <div>
+                      <label for="age" class="mb-2 block text-sm font-semibold text-slate-800">Age*</label>
+                      <input id="age" type="number" class="form-field" placeholder="19" />
+                    </div>
+
+                    <div>
+                      <label for="phone" class="mb-2 block text-sm font-semibold text-slate-800">Phone Number*</label>
+                      <input id="phone" type="tel" class="form-field" placeholder="+234 800 000 0000" />
+                    </div>
+
+                    <div>
+                      <label for="state" class="mb-2 block text-sm font-semibold text-slate-800">Email*</label>
+                      <input id="state" type="text" class="form-field" placeholder="Lagos" />
+                    </div>
+
+                    <div>
+                      <label for="country" class="mb-2 block text-sm font-semibold text-slate-800">Gender*</label>
+                      <input id="country" type="text" class="form-field" placeholder="Nigeria" />
+                    </div>
+
+                    <div>
+                      <label for="destination" class="mb-2 block text-sm font-semibold text-slate-800">Preffered study destination*</label>
+                      <select id="destination" class="form-field">
+                        <option>UK</option>
+                        <option>Canada</option>
+                        <option>Ireland</option>
+                        <option>Australia</option>
+                        <option>USA</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="interview" class="mb-2 block text-sm font-semibold text-slate-800">Other countr(ies) interested in*</label>
+                      <select id="interview" class="form-field">
+                        <option>Have not done yet</option>
+                        <option>Completed</option>
+                        <option>Scheduled</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="level" class="mb-2 block text-sm font-semibold text-slate-800">Program interested in? *</label>
+                      <select id="level" class="form-field">
+                        <option>A Levels</option>
+                        <option>Foundation</option>
+                        <option>Undergraduate</option>
+                        <option>Postgraduate</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="year" class="mb-2 block text-sm font-semibold text-slate-800">Other programme interested in?*
+                      <select id="year" class="form-field">
+                        <option>2026 intake</option>
+                        <option>2027 intake</option>
+                        <option>Not sure yet</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="qualification" class="mb-2 block text-sm font-semibold text-slate-800">Highest qualification?*</label>
+                      <select id="qualification" class="form-field">
+                        <option>SSCE</option>
+                        <option>OND</option>
+                        <option>HND</option>
+                        <option>Bachelor's degree</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="question" class="mb-2 block text-sm font-semibold text-slate-800">Other qualification *</label>
+                      <input id="question" type="text" class="form-field" placeholder="Optional" />
+                    </div>
+
+                    <div>
+                      <label for="visa-refusal" class="mb-2 block text-sm font-semibold text-slate-800">Any previous visa refusal?*</label>
+                      <select id="visa-refusal" class="form-field">
+                        <option>No</option>
+                        <option>Yes</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label for="how-heard" class="mb-2 block text-sm font-semibold text-slate-800">How did you hear about us?*</label>
+                      <select id="how-heard" class="form-field">
+                        <option>A friend</option>
+                        <option>Instagram</option>
+                        <option>Referral partner</option>
+                        <option>Google search</option>
+                      </select>
+                    </div>
+
+                    <div class="sm:col-span-2 pt-3 mx-auto">
+
+                      <button type="submit"  class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#16484B] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
+        
+                        <div  class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
+                          </div>
+
+                        <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-[#16484B]">
+                          Submit Application
+                        </span>
+
+                        <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-[5px] transition-all duration-500 group-hover:bg-[#16484B] hover:-translate-y-1 hover:scale-110">
+                          <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            class="w-5 h-5 text-[#16484B] transition-transform duration-500 group-hover:text-[#E2C065]" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            stroke-width="2.5" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round"
+                          >
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                          </svg>
+                        </div>
+                        
+                      </button>                  
+                    </div>
+                  </form>
                 </div>
-              </form>
-            </div>
           </div>
         </section>
         <section id="blog" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
