@@ -215,6 +215,36 @@
           @apply relative z-10 flex h-full flex-col justify-end gap-3 px-6 pb-8 pt-16 text-white;
         }
 
+
+        /* The Container */
+        .destination-grid {
+          @apply mt-10 flex overflow-x-auto gap-6 scroll-smooth snap-x snap-mandatory;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        .destination-grid::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* The Cards */
+        .destination-card {
+          /* Remove w-full and sm:max-w-sm, replace with fixed widths for carousel */
+          @apply relative isolate flex shrink-0 flex-col justify-end overflow-hidden 
+                border border-sky-300/40 bg-brand-900 shadow-card snap-start;
+          
+          /* Responsive Widths */
+          width: 85%; /* Mobile peek */
+        }
+
+        @screen sm {
+          .destination-card { width: 350px; }
+        }
+
+        @screen lg {
+          .destination-card { width: 400px; }
+        }
+
         .testimonial-section-heading {
           @apply font-display text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] leading-[1.08] text-slate-900;
         }
@@ -230,9 +260,9 @@
         .testimonial-card {
           @apply relative overflow-hidden bg-slate-100 w-full;
         }
-        .testimonial-card { height: 20rem; } /* base */
-        @screen sm { .testimonial-card { height: 20rem; } }
-        @screen md { .testimonial-card { height: 24rem; } }
+        .testimonial-card { height: 24rem; } /* base */
+        @screen sm { .testimonial-card { height: 24rem; } }
+        @screen md { .testimonial-card { height: 26rem; } }
         @screen lg { .testimonial-card { height: 30rem; } }
 
         .testimonial-card img,
@@ -275,6 +305,54 @@
 
         .testimonial-play {
           @apply absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-brand-800 shadow-soft cursor-pointer transition-all duration-300;
+        }
+
+
+        /* Update your existing .testimonial-grid */
+        .testimonial-grid {
+          @apply mt-12 sm:mt-16 flex overflow-x-auto gap-6 sm:gap-8 scroll-smooth;
+          /* Hide scrollbar for Chrome, Safari and Opera */
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+
+        .testimonial-grid::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+
+        /* Update your existing .testimonial-card */
+        .testimonial-card {
+          @apply relative overflow-hidden bg-slate-100 shrink-0;
+          /* Set widths so cards don't collapse */
+          width: 85%; /* Shows a peek of the next card on mobile */
+          scroll-snap-align: center;
+        }
+
+        @screen md {
+          .testimonial-card {
+            width: calc(50% - 1rem); /* 2 cards visible */
+            scroll-snap-align: start;
+          }
+        }
+
+        @screen lg {
+          .testimonial-card {
+            width: calc(33.333% - 1.5rem); /* 3 cards visible */
+          }
+        }
+
+        /* Ensure the container has snap type */
+        .testimonial-grid {
+          scroll-snap-type: x mandatory;
+        }
+
+        /* Basic styling for the nav buttons if you haven't yet */
+        /* .testimonial-nav {
+          @apply mt-8 flex gap-4 justify-center;
+        } */
+
+        .testimonial-nav-btn {
+          @apply h-12 w-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors duration-200;
         }
 
         /* Modal Styles */
@@ -698,7 +776,7 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
               </a>
           </div>
 
-          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div id="destination-carousel" class="destination-grid">
             <article class="group destination-card">
               <img
                 src="assets/country/uk.png"
@@ -754,6 +832,14 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
                 </p>
               </div>
             </article>
+          </div>
+          <div class="testimonial-nav">
+            <button type="button" class="nav-btn-prev" data-target="destination-carousel">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button type="button" class="nav-btn-next" data-target="destination-carousel">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </section>
 
@@ -1204,10 +1290,10 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
         <div class="flex flex-col gap-4 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between contact-text">
           <p>&copy; <script>document.write(new Date().getFullYear())</script> StudyGlide. All rights reserved.</p>
           <div class="flex items-center gap-5 text-base">
-            <a href="#" aria-label="X" class="transition hover:text-accent-200"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn" class="transition hover:text-accent-200"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Instagram" class="transition hover:text-accent-200"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook" class="transition hover:text-accent-200"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/studyglide_edu" aria-label="X" class="transition hover:text-accent-200"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.tiktok.com/@studyglide_edu?_r=1&_t=ZS-95OCqk0Sirk" aria-label="TikTok" class="transition hover:text-accent-200"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/studyglide_edu?utm_source=qr&igsh=enFiZXQ4azl1eXg4" aria-label="Instagram" class="transition hover:text-accent-200"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/18DvbTwACB/" aria-label="Facebook" class="transition hover:text-accent-200"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
           <p>Design by <span class="underline underline-offset-4">JayintopStudio</span></p>
         </div>
@@ -1397,6 +1483,56 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
         // ESC key closes any open modal
         document.addEventListener('keydown', e => {
           if (e.key === 'Escape') closeVideoModal();
+        });
+      });
+
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const grid = document.querySelector('.testimonial-grid');
+        const prevBtn = document.querySelector('[aria-label="Previous testimonial"]');
+        const nextBtn = document.querySelector('[aria-label="Next testimonial"]');
+
+        if (!grid || !prevBtn || !nextBtn) return;
+
+        const getScrollAmount = () => {
+          // Get the width of one card including the gap
+          const card = grid.querySelector('.testimonial-card');
+          return card.offsetWidth + 32; // 32 is the gap (8 in tailwind)
+        };
+
+        nextBtn.addEventListener('click', () => {
+          grid.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+          grid.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const scrollCarousel = (btn, direction) => {
+          const targetId = btn.getAttribute('data-target');
+          const container = document.getElementById(targetId);
+          
+          if (container) {
+            const card = container.querySelector('article');
+            const scrollAmount = card.offsetWidth + 24; // Card width + gap
+            
+            container.scrollBy({ 
+              left: direction === 'next' ? scrollAmount : -scrollAmount, 
+              behavior: 'smooth' 
+            });
+          }
+        };
+
+        // Attach listeners to all next buttons
+        document.querySelectorAll('.nav-btn-next').forEach(btn => {
+          btn.onclick = () => scrollCarousel(btn, 'next');
+        });
+
+        // Attach listeners to all prev buttons
+        document.querySelectorAll('.nav-btn-prev').forEach(btn => {
+          btn.onclick = () => scrollCarousel(btn, 'prev');
         });
       });
     </script>
