@@ -113,6 +113,49 @@
           @apply font-inter text-[#94A3B8] font-normal text-[14px] leading-[22.75px] tracking-[0px];
         }
 
+        .sidebar-contact-text-title {
+          @apply font-inter font-semibold text-[#FFFFFF] text-[24px] leading-[32px] tracking-[0px];
+
+        }
+        .sidebar-contact-text-title-paragraph {
+          @apply font-inter font-normal text-[#FFFFFF] opacity-60 text-[18px] leading-[28px] tracking-[0px];
+
+        }
+
+        .sidebar-contact-text-subtitle {
+          @apply font-inter font-semibold text-[18px] text-[#FFFFFF]  leading-[28px] tracking-[0px];
+        }
+
+        .sidebar-contact-text-subtitle-paragraph {
+          @apply font-inter font-normal text-[14px] opacity-60 text-[#FFFFFF] leading-[24px] tracking-[0px];
+
+        }
+
+        .sidebar-contact-text-subtitle-bold-paragraph {
+          @apply font-inter font-semibold text-[16px] text-[#FFFFFF] leading-[24px] tracking-[0px];
+        }
+
+
+        .contact-form-title {
+          @apply font-inter font-semibold text-[36px] text-[#181D27] leading-[44px] tracking-[-2%];
+        }
+
+        .contact-form-paragraph {
+          @apply font-inter font-normal text-[20px] text-[#535862] leading-[30px] mb-[20px] tracking-[0px];
+        }
+
+        .contact-form-email {
+          @apply font-inter font-normal text-[20px] text-[#16484B] leading-[30px] mb-[20px] tracking-[0px];
+        }
+
+        .contact-form-label {
+          @apply font-inter font-normal text-[14px] text-[#414651] leading-[20px] mb-[14px] tracking-[0px];
+        }
+
+        .contact-form-placeholder::placeholder {
+          @apply font-inter font-normal text-[16px] text-[#717680] leading-[24px] mb-[16px] tracking-[0px];
+        }
+
         .shell {
           @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0;
         }
@@ -277,11 +320,7 @@
 
         }
 
-        /* .testimonial-overlay {
-          @apply absolute inset-x-0 bottom-0 px-5 pb-5 pt-4 text-white;
-          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(82, 88, 97, 0.78) 100%);
-          backdrop-filter: blur(16px);
-        } */
+        
 
         .testimonial-stars {
           @apply flex gap-1 text-sm text-white;
@@ -346,10 +385,7 @@
           scroll-snap-type: x mandatory;
         }
 
-        /* Basic styling for the nav buttons if you haven't yet */
-        /* .testimonial-nav {
-          @apply mt-8 flex gap-4 justify-center;
-        } */
+        
 
         .testimonial-nav-btn {
           @apply h-12 w-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-colors duration-200;
@@ -464,879 +500,163 @@
   </head>
   <body>
     <section class="relative isolate overflow-hidden bg-brand-800 text-white">
-      <header class="relative z-50"> <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50 pointer-events-none"></div>
-    
-    <div class="shell pt-3 sm:pt-4 lg:pt-6">
-        <nav class="flex items-center justify-between gap-4">
-            <a href="#" class="flex shrink-0 items-center">
-                <img src="assets/logo.svg" alt="StudyGuide logo" class="h-10 w-auto md:h-11" />
-            </a>
-
-            <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
-                <a href="#home" class="nav-link anchor-nav text-xs lg:text-sm font-bold">HOME</a>
-                <a href="#services" class="nav-link anchor-nav text-xs lg:text-sm font-bold">ABOUT US</a>
-                <a href="#destinations" class="nav-link anchor-nav text-xs lg:text-sm font-bold">SERVICES</a>
-                <a href="#resources" class="nav-link anchor-nav text-xs lg:text-sm font-bold">DESTINATION</a>
-                <a href="#faq" class="nav-link anchor-nav text-xs lg:text-sm font-bold">FAQ</a>
-                <a href="#blog" class="nav-link anchor-nav text-xs lg:text-sm font-bold">BLOG</a>
-            </div>
-
-            <div class="flex items-center gap-3">
-                
-                <a class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
-                    <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
-                    </div>
-                    <span class="relative z-10 text-sm font-bold mr-10">Get In Touch</span>
-                    <div class="relative z-10 flex items-center justify-center w-7 h-7 ml-3 bg-[#16484b] rounded-md group-hover:bg-[#E2C065]">
-                        <svg class="w-4 h-4 text-[#E2C065] group-hover:text-[#16484b]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
+      <header class="relative z-50 py-3"> 
+        <div class="hero-pattern absolute inset-0 bg-grid-fade opacity-50 pointer-events-none"></div>
+        <div class="shell pt-3 sm:pt-4 lg:pt-2">
+            <nav class="flex items-center justify-between gap-4">
+                <a href="#" class="flex shrink-0 items-center">
+                    <img src="assets/logo.svg" alt="StudyGuide logo" class="h-10 w-auto md:h-11" />
                 </a>
-            
-                <details class="relative md:hidden group">
-                    <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/15">
-                        <i class="fa-solid fa-bars group-open:hidden"></i>
-                        <i class="fa-solid fa-xmark hidden group-open:block"></i>
-                    </summary>
+
+                <div class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
+                    <a href="#home" class="nav-link anchor-nav text-xs lg:text-sm font-bold">HOME</a>
+                    <a href="#services" class="nav-link anchor-nav text-xs lg:text-sm font-bold">ABOUT US</a>
+                    <a href="#destinations" class="nav-link anchor-nav text-xs lg:text-sm font-bold">SERVICES</a>
+                    <a href="#resources" class="nav-link anchor-nav text-xs lg:text-sm font-bold">DESTINATION</a>
+                    <a href="#faq" class="nav-link anchor-nav text-xs lg:text-sm font-bold">FAQ</a>
+                    <a href="#blog" class="nav-link anchor-nav text-xs lg:text-sm font-bold">BLOG</a>
+                </div>
+
+                <div class="flex items-center gap-3">
                     
-                    <div class="absolute right-0 top-full mt-4 z-50 w-[80vw] max-w-[300px] border border-white/10 bg-brand-900/98 p-6 shadow-2xl rounded-xl backdrop-blur-lg">
-                        <div class="flex flex-col gap-5 text-sm font-bold text-white/80">
-                            <a href="#home" class="hover:text-[#E2C065]">HOME</a>
-                            <a href="#services" class="hover:text-[#E2C065]">ABOUT US</a>
-                            <a href="#destinations" class="hover:text-[#E2C065]">DESTINATION</a>
-                            <a href="#resources" class="hover:text-[#E2C065]">RESOURCES</a>
-                            <a href="#faq" class="hover:text-[#E2C065]">FAQ</a>
-                            <a href="#blog" class="hover:text-[#E2C065]">BLOG</a>
-                            <hr class="border-white/10">
-                            <a href="#apply" class="w-full bg-[#E2C065] py-3 text-center text-brand-900 rounded-lg">Get In Touch</a>
+                    <a class="hidden sm:inline-flex pixel-anchor group relative items-center h-11 px-4 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300">
+                        <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none">
                         </div>
-                    </div>
-                </details>
-            </div>
-        </nav>
-    </div>
-</header>
-
-<div class="shell pb-20 sm:pb-24 md:pb-28 pt-12 sm:pt-16 md:pt-20">
-        <div class="grid grid-cols-1 items-center gap-12">
-          <div class="w-full">
-            <div
-              class="mb-6 inline-flex items-center gap-2 rounded-full border border-accent-300/20 bg-accent-300/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent-200"
-            >
-              <i class="fa-solid fa-star text-[10px]"></i>
-              Visa Processing | IELTS Prep | Admissions
-            </div>
-            <div class="w-full lg:w-4/4"> 
-              <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-[-0.02em] text-white md:leading-[1.1] lg:leading-[1.15]">
-                Your Global Education <span class="inline-block whitespace-nowrap font-inter text-[2rem] font-medium leading-[1.1] tracking-[-0.02em] text-white underline decoration-white decoration-[2px] underline-offset-[6px] md:text-[60px] md:leading-[72px] md:decoration-[3px] md:underline-offset-[10px]">StudyGuide</span>
-                <br />
-                Starts Here.
-              </h1>
-            </div>
-            
-            <p class="mt-6 max-w-lg sm:max-w-xl lg:max-w-2xl font-body text-lg sm:text-xl md:text-2xl font-normal leading-7 sm:leading-8 md:leading-relaxed tracking-normal text-white/80">
-              Expert guidance for Nigerian students ready to study in the UK, USA,
-              Canada, and beyond. We simplify the journey from application to
-              arrival so your next move feels certain.
-            </p>
-
-<div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 lg:gap-6">
-
-              <div class="flex flex-col sm:flex-row items-center gap-4 w-full max-w-2xl">
-    
-                  <a href="#destinations" class="pixel-anchor group relative flex items-center h-11 justify-between w-full sm:w-1/2 px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-lg no-underline transition-all duration-300 hover:border-white/40">
-                      <div id="pixel-grid" class="pixel-grid absolute inset-0 grid pointer-events-none"></div>
-
-                      <span class="relative z-10 anchor-text pl-3 text-sm font-bold transition-colors duration-500 group-hover:text-brand-900">
-                          Explore Destinations
-                      </span>
-
-                      <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-md transition-all duration-500 group-hover:bg-white hover:-translate-y-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#E2C065] group-hover:text-[#16484b]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                              <line x1="7" y1="17" x2="17" y2="7"></line>
-                              <polyline points="7 7 17 7 17 17"></polyline>
-                          </svg>
-                      </div>
-                  </a>
-
-                  <a class="secondary-pixel-anchor group relative flex items-center h-11 justify-between w-full sm:w-1/2 px-2 overflow-hidden bg-transparent border border-[#E2C065]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#E2C065]">
-                      <div class="secondary-pixel-grid absolute inset-0 grid pointer-events-none"></div>
-
-                      <span class="relative z-10 anchor-text pl-2 text-[#E2C065] text-sm font-bold transition-colors duration-500 group-hover:text-white">
-                          Get Free Advice
-                      </span>
-
-                      <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-md transition-all duration-500 group-hover:bg-[#16484b]">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black group-hover:text-[#E2C065]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                              <line x1="7" y1="17" x2="17" y2="7"></line>
-                              <polyline points="7 7 17 7 17 17"></polyline>
-                          </svg>
-                      </div>
-                  </a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="relative overflow-hidden shadow-card">
-            <img
-              src="assets/hero-header-section.png"
-              alt="Smiling international student in a hallway"
-class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-center"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/10 to-transparent"></div>
-          </div>
+                        <span class="relative z-10 text-sm font-bold mr-10">Get In Touch</span>
+                        <div class="relative z-10 flex items-center justify-center w-7 h-7 ml-3 bg-[#16484b] rounded-md group-hover:bg-[#E2C065]">
+                            <svg class="w-4 h-4 text-[#E2C065] group-hover:text-[#16484b]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                
+                    <details class="relative md:hidden group">
+                        <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/15">
+                            <i class="fa-solid fa-bars group-open:hidden"></i>
+                            <i class="fa-solid fa-xmark hidden group-open:block"></i>
+                        </summary>
+                        
+                        <div class="z-[999] absolute right-0 top-full mt-4 z-50 w-[80vw] max-w-[300px]  border border-white/10 bg-brand-900/98 p-6 shadow-2xl rounded-xl backdrop-blur-lg">
+                            <div class="flex flex-col gap-5 text-sm font-bold text-white/80">
+                                <a href="#home" class="hover:text-[#E2C065]">HOME</a>
+                                <a href="#services" class="hover:text-[#E2C065]">ABOUT US</a>
+                                <a href="#destinations" class="hover:text-[#E2C065]">DESTINATION</a>
+                                <a href="#resources" class="hover:text-[#E2C065]">RESOURCES</a>
+                                <a href="#faq" class="hover:text-[#E2C065]">FAQ</a>
+                                <a href="#blog" class="hover:text-[#E2C065]">BLOG</a>
+                                <hr class="border-white/10">
+                                <a href="#apply" class="w-full bg-[#E2C065] py-3 text-center text-brand-900 rounded-lg">Get In Touch</a>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </nav>
         </div>
-      </div>
-
-      <div
-        class="absolute -bottom-px right-0 h-20 w-28 bg-white [clip-path:polygon(100%_0,0_100%,100%_100%)]"
-      ></div>
+      </header>
     </section>
 
     <main>
-      <div class="shell">
-        <section class="py-16 md:py-20">
-          <div class="text-center">
-            <p class="text-sm font-medium uppercase tracking-[0.3em] text-slate-400">
-              Trusted by 4,000+ international learners
-            </p>
-          </div>
-          <div class="logo-marquee mt-8">
-            <div class="logo-marquee-track">
-              <div class="logo-marquee-group">
-                <div class="logo-tile">
-                  <img src="assets/universities/aston-university.svg" alt="Aston University logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/conestoga-college.svg" alt="Conestoga College logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/national-college-of-ireland.svg" alt="National College of Ireland logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/niagara-college.svg" alt="Niagara College logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/robert-gordon-university.svg" alt="Robert Gordon University logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/technological-university-of-the-shannon.svg" alt="Technological University of the Shannon logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-hertfordshire.svg" alt="University of Hertfordshire logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-hull.svg" alt="University of Hull logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-sunderland.svg" alt="University of Sunderland logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-ulster.svg" alt="University of Ulster logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-windsor.svg" alt="University of Windsor logo" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/wrexham-university.svg" alt="Wrexham University logo" class="logo-image" />
-                </div>
-              </div>
-              <div class="logo-marquee-group" aria-hidden="true">
-                <div class="logo-tile">
-                  <img src="assets/universities/aston-university.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/conestoga-college.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/national-college-of-ireland.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/niagara-college.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/robert-gordon-university.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/technological-university-of-the-shannon.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-hertfordshire.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-hull.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-sunderland.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-ulster.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/university-of-windsor.svg" alt="" class="logo-image" />
-                </div>
-                <div class="logo-tile">
-                  <img src="assets/universities/wrexham-university.svg" alt="" class="logo-image" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-        <section class="py-12 sm:py-16 md:py-20">
-          <div class="max-w-2xl">
-            <p class="eyebrow">Our Expertise</p>
-            <h2 class="section-title mt-4">Comprehensive Services</h2>
-          </div>
-
-          <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            <article class="service-card border-transparent">
-              <span class="icon-chip">
-                <i class="fa-solid fa-building-columns"></i>
-              </span>
-              <h3 class="mt-5 font-display text-lg text-slate-900">University Selection</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Personalized mapping of your academic profile to the world’s best-fit
-                institutions.
-              </p>
-            </article>
-
-            <article class="service-card border-transparent">
-              <span class="icon-chip">
-                <i class="fa-regular fa-file-lines"></i>
-              </span>
-              <h3 class="mt-5 font-display text-lg text-slate-900">Visa Guidance</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                End-to-end documentation support to ensure high-quality, confident
-                applications.
-              </p>
-            </article>
-
-            <article class="service-card border-transparent">
-              <span class="icon-chip">
-                <i class="fa-solid fa-money-bill-wave"></i>
-              </span>
-              <h3 class="mt-5 font-display text-lg text-slate-900">Scholarship Support</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Access exclusive funding and school-based awards you can actually apply
-                for.
-              </p>
-            </article>
-
-            <article class="service-card border-transparent">
-              <span class="icon-chip">
-                <i class="fa-solid fa-plane-departure"></i>
-              </span>
-              <h3 class="mt-5 font-display text-lg text-slate-900">Pre-departure Briefing</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Practical preparation for travel, accommodation, and settling into your
-                host country.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="destinations" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
-          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between py-6">
-            <div>
-              <p class="eyebrow">Global Reach</p>
-              <h2 class="section-title mt-4">Top Study Destinations</h2>
-            </div>
-            
-
-            <a href="#apply"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#16484B]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#E2C065]/40">
-    
-                <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
-                  </div>
-
-                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
-                  View All Destinations
-                </span>
-
-              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5px] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    stroke-width="2.5" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"
-                  >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-                
-              </a>
-          </div>
-
-          <div id="destination-carousel" class="destination-grid">
-            <article class="group destination-card">
-              <img
-                src="assets/country/uk.png"
-                alt="United Kingdom flag"
-                class="destination-card-image object-[52%_center]"
-              />
-              <div class="destination-card-content">
-                <h3 class="font-display text-[2rem] leading-tight">United Kingdom</h3>
-                <p class="text-sm leading-6 text-white/80">
-                  1-year Masters programs and post study work visas available.
-                </p>
-              </div>
-            </article>
-
-            <article class="group destination-card">
-              <img
-                src="assets/country/canada.jpg"
-                alt="Canada flag"
-                class="destination-card-image"
-              />
-              <div class="destination-card-content">
-                <h3 class="font-display text-2xl">Canada</h3>
-                <p class="text-sm leading-6 text-white/80">
-                  Strong immigration pathways and supportive student communities with real opportunities.
-                </p>
-              </div>
-            </article>
-
-            <article class="group destination-card">
-              <img
-                src="assets/country/ireland.jpg"
-                alt="Ireland flag"
-                class="destination-card-image"
-              />
-              <div class="destination-card-content">
-                <h3 class="font-display text-2xl">Ireland</h3>
-                <p class="text-sm leading-6 text-white/80">
-                  Innovation-led universities with fast-growing tech and healthcare sectors.
-                </p>
-              </div>
-            </article>
-
-            <article class="group destination-card">
-              <img
-                src="assets/country/australia.png"
-                alt="Australia flag"
-                class="destination-card-image"
-              />
-              <div class="destination-card-content">
-                <h3 class="font-display text-2xl">Australia</h3>
-                <p class="text-sm leading-6 text-white/80">
-                  Career-focused education with student-friendly cities and flexible study options.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="testimonial-nav">
-            <button type="button" class="nav-btn-prev" data-target="destination-carousel">
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button type="button" class="nav-btn-next" data-target="destination-carousel">
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </section>
-
-        <section id="testimonial"  class="py-16 sm:py-20 md:py-24 lg:py-28">
+      <div class="min-h-screen grid grid-cols-1 lg:grid-cols-12 font-sans">
+  
+        <aside class="hidden lg:flex lg:col-span-3 hero-pattern inset-0 bg-grid-fade bg-brand-800 pointer-events-none text-white p-12 flex-col justify-start space-y-12">
           <div>
-            <h2 class="testimonial-section-heading display-md-semibold">We're proud of our success stories</h2>
-            <p class="testimonial-section-copy">
-              Hear from some of our amazing students we have helped.
-            </p>
-
-            <div class="testimonial-grid">
-              <article class="testimonial-card group">
-                  <video
-                  src="assets/testimonial/first.mp4"
-                  alt="Video testimonial"
-                  loading="lazy"
-                  muted
-                  playsinline
-                ></video>
-                <span class="testimonial-play opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200" data-modal="first" role="button" tabindex="0" title="Play video">
-                  <i class="fa-solid fa-play"></i>
-                </span>
-                <div class="testimonial-overlay opacity-100 group-hover:opacity-0 group-hover:pointer-events-none group-focus-within:opacity-0">
-                  <div class="testimonial-stars py-3">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <p class="testimonial-name">Toyosi</p>
-                  <p class="testimonial-school">University of Northumbria</p>
-                  <p class="testimonial-country pb-2">UK</p>
-                </div>
-              </article>
-
-              <article class="testimonial-card group">
-                <video
-                  src="assets/testimonial/second.mp4"
-                  alt="Video testimonial"
-                  loading="lazy"
-                  muted
-                  playsinline
-                ></video>
-                <span class="testimonial-play opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200" data-modal="second" role="button" tabindex="0" title="Play video">
-                  <i class="fa-solid fa-play"></i>
-                </span>
-                <div class="testimonial-overlay opacity-100 group-hover:opacity-0 group-hover:pointer-events-none group-focus-within:opacity-0">
-                  <div class="testimonial-stars py-3">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <p class="testimonial-name">Deborah</p>
-                  <p class="testimonial-school">University of Lancashire</p>
-                  <p class="testimonial-country pb-2">UK</p>
-                </div>
-              </article>
-
-              <article class="testimonial-card group">
-                <video
-                  src="assets/testimonial/third.mp4"
-                  alt="Video testimonial"
-                  loading="lazy"
-                  muted
-                  playsinline
-                ></video>
-                <span class="testimonial-play opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200" data-modal="third" role="button" tabindex="0" title="Play video">
-                  <i class="fa-solid fa-play"></i>
-                </span>
-                <div class="testimonial-overlay opacity-100 group-hover:opacity-0 group-hover:pointer-events-none group-focus-within:opacity-0">
-                  <div class="testimonial-stars py-3">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <p class="testimonial-name">Ayomide</p>
-                  <p class="testimonial-school">University of Sunderland</p>
-                  <p class="testimonial-country pb-2">Canada</p>
-                </div>
-              </article>
-            </div>
-
-            <div class="testimonial-nav" aria-label="Testimonial navigation">
-              <button type="button" class="testimonial-nav-btn" aria-label="Previous testimonial">
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-              <button type="button" class="testimonial-nav-btn" aria-label="Next testimonial">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
+            <h2 class="text-3xl font-semibold mb-4 sidebar-contact-text-title">Get in touch</h2>
+            <p class="sidebar-contact-text-title-paragraph">We'd love to hear from you. Our friendly team is always here to chat and guide you every step of the way.</p>
           </div>
-        </section>
 
-        <section id="apply" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
-          <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
-              <div class="overflow-hidden shadow-card my-16">
-                <img
-                  src="assets/form-girl.jpg"
-                  alt="Prospective student holding books"
-                  class="w-full h-64 sm:h-80 md:h-96 lg:min-h-[786px] object-cover object-center"
-                />
-              </div>
-
-                <div class="max-w-xl">
-                  <h2 class="section-title px-4 sm:px-6 lg:px-8">Start your study abroad journey here</h2>
-                  <p class="mt-4 font-body font-normal text-lg sm:text-xl leading-[1.75] tracking-normal text-slate-600 px-4 sm:px-6 lg:px-8">
-                    Fill the aplication form below
-                  </p>
-
-                  <form class="mt-8 grid gap-4 sm:gap-6 sm:grid-cols-2 px-4 sm:px-6 lg:px-8">
-                    <div class="sm:col-span-2">
-                      <label for="full-name" class="mb-2 block text-sm font-semibold text-slate-800">Full Name*</label>
-                      <input id="full-name" type="text" class="form-field" placeholder="Your full name" />
-                    </div>
-
-                    <div>
-                      <label for="age" class="mb-2 block text-sm font-semibold text-slate-800">Age*</label>
-                      <input id="age" type="number" class="form-field" placeholder="19" />
-                    </div>
-
-                    <div>
-                      <label for="phone" class="mb-2 block text-sm font-semibold text-slate-800">Phone Number*</label>
-                      <input id="phone" type="tel" class="form-field" placeholder="+234 800 000 0000" />
-                    </div>
-
-                    <div>
-                      <label for="state" class="mb-2 block text-sm font-semibold text-slate-800">Email*</label>
-                      <input id="state" type="text" class="form-field" placeholder="Lagos" />
-                    </div>
-
-                    <div>
-                      <label for="country" class="mb-2 block text-sm font-semibold text-slate-800">Gender*</label>
-                      <input id="country" type="text" class="form-field" placeholder="Nigeria" />
-                    </div>
-
-                    <div>
-                      <label for="destination" class="mb-2 block text-sm font-semibold text-slate-800">Preffered study destination*</label>
-                      <select id="destination" class="form-field">
-                        <option>UK</option>
-                        <option>Canada</option>
-                        <option>Ireland</option>
-                        <option>Australia</option>
-                        <option>USA</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label for="interview" class="mb-2 block text-sm font-semibold text-slate-800">Other countr(ies) interested in*</label>
-                      <select id="interview" class="form-field">
-                        <option>Have not done yet</option>
-                        <option>Completed</option>
-                        <option>Scheduled</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label for="level" class="mb-2 block text-sm font-semibold text-slate-800">Program interested in? *</label>
-                      <select id="level" class="form-field">
-                        <option>A Levels</option>
-                        <option>Foundation</option>
-                        <option>Undergraduate</option>
-                        <option>Postgraduate</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label for="year" class="mb-2 block text-sm font-semibold text-slate-800">Other programme interested in?*
-                      <select id="year" class="form-field">
-                        <option>2026 intake</option>
-                        <option>2027 intake</option>
-                        <option>Not sure yet</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label for="qualification" class="mb-2 block text-sm font-semibold text-slate-800">Highest qualification?*</label>
-                      <select id="qualification" class="form-field">
-                        <option>SSCE</option>
-                        <option>OND</option>
-                        <option>HND</option>
-                        <option>Bachelor's degree</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label for="question" class="mb-2 block text-sm font-semibold text-slate-800">Other qualification *</label>
-                      <input id="question" type="text" class="form-field" placeholder="Optional" />
-                    </div>
-
-                    <div>
-                      <label for="visa-refusal" class="mb-2 block text-sm font-semibold text-slate-800">Any previous visa refusal?*</label>
-                      <select id="visa-refusal" class="form-field">
-                        <option>No</option>
-                        <option>Yes</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label for="how-heard" class="mb-2 block text-sm font-semibold text-slate-800">How did you hear about us?*</label>
-                      <select id="how-heard" class="form-field">
-                        <option>A friend</option>
-                        <option>Instagram</option>
-                        <option>Referral partner</option>
-                        <option>Google search</option>
-                      </select>
-                    </div>
-
-                    <div class="sm:col-span-2 pt-3 mx-auto">
-
-                      <button type="submit"  class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#16484B] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
-        
-                        <div  class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
-                          </div>
-
-                        <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-[#16484B]">
-                          Submit Application
-                        </span>
-
-                        <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-[5px] transition-all duration-500 group-hover:bg-[#16484B] hover:-translate-y-1 hover:scale-110">
-                          <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            class="w-5 h-5 text-[#16484B] transition-transform duration-500 group-hover:text-[#E2C065]" 
-                            viewBox="0 0 24 24" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            stroke-width="2.5" 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                          >
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                          </svg>
-                        </div>
-                        
-                      </button>                  
-                    </div>
-                  </form>
-                </div>
-          </div>
-        </section>
-        <section id="blog" class="shell py-16 sm:py-20 md:py-24 lg:py-28">
-          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div class="max-w-2xl">
-              <h2 class="section-title">Latest from our Blog</h2>
-              <p class="mt-4 text-base leading-8 text-slate-600">
-                The latest news, technologies, and resources from our team to help you
-                make informed study abroad decisions.
-              </p>
-            </div>
-            
-
-            <a href="#home"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between min-w-[180px] px-2 overflow-hidden bg-transparent border border-[#16484B]/50 rounded-lg no-underline transition-all duration-300 hover:border-[#E2C065]/40">
-    
-              <div  class="pixel-grid absolute inset-0 grid pointer-events-none">
-                </div>
-
-              <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
-                Explore All Resources
-              </span>
-
-              <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5px] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  stroke-width="2.5" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round"
-                >
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
+          <div class="space-y-8">
+            <div class="flex gap-4">
+              <div class="mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-                
-            </a>
-          </div>
-
-          <div class="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            <article class="blog-card">
-              <img
-                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
-                alt="Plant on a table"
-                class="blog-card-media"
-                loading="lazy"
-              />
-              <div class="blog-card-body">
-                <p class="blog-card-meta">Scholarships • 5 Min Read</p>
-                <div class="blog-card-heading">
-                  <h3 class="blog-card-title">Top UK scholarships for Nigerian students in 2026</h3>
-                  <span class="blog-card-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </span>
-                </div>
-                <p class="blog-card-copy">
-                  Discover fully funded opportunities, key eligibility criteria, and
-                  timelines worth planning around.
-                </p>
+              <div>
+                <h3 class="sidebar-contact-text-subtitle">Chat to us</h3>
+                <p class="mb-2 sidebar-contact-text-subtitle-paragraph">Our friendly team is here to help.</p>
+                <a href="mailto:info@studyglideedu.com" class="sidebar-contact-text-subtitle-bold-paragraph">info@studyglideedu.com</a>
               </div>
-            </article>
-
-            <article class="blog-card">
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
-                alt="Woman smiling"
-                class="blog-card-media"
-                loading="lazy"
-              />
-              <div class="blog-card-body">
-                <p class="blog-card-meta">Test Prep • 3 Min Read</p>
-                <div class="blog-card-heading">
-                  <h3 class="blog-card-title">IELTS preparation: how to score band 8.0 on your first try</h3>
-                  <span class="blog-card-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </span>
-                </div>
-                <p class="blog-card-copy">
-                  Master the listening, speaking, and writing sections with a focused,
-                  realistic weekly plan.
-                </p>
-              </div>
-            </article>
-
-            <article class="blog-card">
-              <div class="blog-card-placeholder">
-                <div>
-                  <p class="font-display text-5xl tracking-[0.35em] text-brand-700">BLOG</p>
-                  <p class="mt-6 text-sm uppercase tracking-[0.4em] text-brand-500">Visa tips</p>
-                  <p class="mt-3 text-sm uppercase tracking-[0.4em] text-brand-500">Student stories</p>
-                </div>
-              </div>
-              <div class="blog-card-body">
-                <p class="blog-card-meta">Student Life • 10 Min Read</p>
-                <div class="blog-card-heading">
-                  <h3 class="blog-card-title">Cost of living comparison: UK vs Canada vs USA</h3>
-                  <span class="blog-card-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </span>
-                </div>
-                <p class="blog-card-copy">
-                  A comprehensive breakdown of rent, food, and transport to help you
-                  budget for international student life.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-      </div> 
-    </main>
-
-    <footer id="faq" class="relative mt-12 overflow-hidden bg-brand-800 text-white">
-      <div
-        class="pointer-events-none absolute -top-px right-0 h-20 w-28 bg-white [clip-path:polygon(100%_100%,0_0,100%_0)]"
-      ></div>
-      <div class="shell py-16">
-        <div class="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-2 xl:grid-cols-[1fr_0.85fr_0.8fr_1.35fr]">
-          <div>
-            <div class="flex items-center gap-3">
-              <a href="#home" class="flex items-center gap-3">
-                <img src="assets/Logo_footer.png" class="w-full" alt="StudyGuide logo" class="h-11 w-11" />
-              </a>
             </div>
-            <p class="mt-6 max-w-sm footer-cta ">
-              Nigeria's most trusted education
-              consultancy, bridging the gap between
-              local talent and global opportunities.
+
+            <div class="flex gap-4">
+              <div class="mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="sidebar-contact-text-subtitle">Office</h3>
+                <p class="sidebar-contact-text-subtitle-paragraph mb-2">Come say hello at our office HQ.</p>
+                <p class="sidebar-contact-text-subtitle-bold-paragraph">Shop 1MS FAAN complex beside FAAN staff quarters, Ikeja, Lagos State</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="sidebar-contact-text-subtitle">Phone</h3>
+                <p class="sidebar-contact-text-subtitle-paragraph mb-2">Mon-Fri from 8am to 5pm.</p>
+                <p class="sidebar-contact-text-subtitle-bold-paragraph">+234 913 307 1334</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- social media icons here -->
+        </aside>
+
+        <main class="col-span-1 lg:col-span-9 bg-white flex items-center justify-center p-8 lg:px-24">
+          <div class="max-w-2xl w-full lg:px-12">
+            <h1 class="contact-form-title">Contact Us</h1>
+            <p class="contact-form-paragraph py-2">
+              You can reach us anytime via 
+              <br />
+              <a href="mailto:info@studyglideedu.com" class="contact-form-email">info@studyglideedu.com</a>
             </p>
-          </div>
 
-          <div>
-            <h3 class="font-display text-lg">Contact</h3>
-            <div class="mt-5 space-y-3 text-sm text-white/70">
-              <p class="contact-text">
-                <span class="font-semibold contact-title">Office Address</span>
-                <br />
-                Shop 1MS FAAN complex beside FAAN staff quarters, Ikeja along Lagos State
-              </p>
-              <p class="contact-text">
-                <span class="font-semibold contact-title">Phone</span>
-                <br /> 
-                +234 913 307 1334
-              </p>
-              <p class="contact-text">
-                <span class="font-semibold contact-title">Email</span>
-                <br /> 
-                Info@studyglideedu.com
-              </p>
-            </div>
-          </div>
+            <form class="space-y-6 py-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                  <label class="contact-form-label">First name *</label>
+                  <input type="text" placeholder="First name" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none transition-all">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="contact-form-label">Last name *</label>
+                  <input type="text" placeholder="Last name" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none transition-all">
+                </div>
+              </div>
 
-          <div>
-            <h3 class="font-display text-lg">Quick Links</h3>
-            <div class="mt-5 space-y-3">
-              <a href="#services" class="quick-link-text">About us</a>
-              <a href="#destinations" class="quick-link-text block">Contact Us</a>
-              <a href="#faq" class="quick-link-text block">FAQ</a>
-              <a href="#blog" class="quick-link-text block">Blog</a>
-              <a href="#blog" class="quick-link-text block">Blog Post</a>
-              <a href="#resources" class="quick-link-text block">Scholarship</a>
-            </div>
-          </div>
+              <div class="flex flex-col gap-2">
+                <label class="contact-form-label">Email *</label>
+                <input type="email" placeholder="you@company.com" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none">
+              </div>
 
-          <div>
-            <h3 class="font-display text-lg">Stay up to date</h3>
-            <p class="mt-5 max-w-[48ch] contact-text">
-              Study abroad news and opportunities, first access to new intakes, and
-              practical planning tips delivered monthly.
-            </p>
-            <form class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-stretch">
-              <input type="email" class="footer-subscribe-input form-field min-w-0 flex-1 border-white/15 bg-white text-slate-900 sm:min-w-[260px]" placeholder="Enter your email" />
-             
-              <button type="submit"  class="pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#E2C065] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
-    
-                <div class="pixel-grid absolute inset-0 grid pointer-events-none">
-                  </div>
+              <div class="flex flex-col gap-2">
+                <label class="contact-form-label">Phone Number</label>
+                <input type="tel" placeholder="+234 9133071334" class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none">
+              </div>
 
-                <span class="relative z-10 anchor-text transition-colors duration-500 group-hover:text-[#E2C065]">
-                  Subscribe
-                </span>
+              <div class="flex flex-col gap-2">
+                <label class="contact-form-label">Message *</label>
+                <textarea rows="5" placeholder="Leave us a message..." class="contact-form-placeholder border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#1a4342] outline-none resize-none"></textarea>
+              </div>
 
-                <span class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#16484b] rounded-[5px] transition-all duration-500 group-hover:bg-[#E2C065] hover:-translate-y-1 hover:scale-110">
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  class="w-5 h-5 text-[#E2C065] transition-transform duration-500 group-hover:text-[#16484b]" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  stroke-width="2.5" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round"
-                >
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </span>
-                
+              <button type="submit" class="w-full bg-[#1a4342] text-white py-4 px-6 rounded-lg font-semibold flex justify-between items-center hover:bg-[#143534] transition-colors">
+                Send Message
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+                </svg>
               </button>
             </form>
           </div>
-        </div>
-
-        <div class="flex flex-col gap-4 pt-6 text-sm text-white/55 md:flex-row md:items-center md:justify-between contact-text">
-          <p>&copy; <script>document.write(new Date().getFullYear())</script> StudyGlide. All rights reserved.</p>
-          <div class="flex items-center gap-5 text-base">
-            <a href="https://twitter.com/studyglide_edu" aria-label="X" class="transition hover:text-accent-200"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.tiktok.com/@studyglide_edu?_r=1&_t=ZS-95OCqk0Sirk" aria-label="TikTok" class="transition hover:text-accent-200"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/studyglide_edu?utm_source=qr&igsh=enFiZXQ4azl1eXg4" aria-label="Instagram" class="transition hover:text-accent-200"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/share/18DvbTwACB/" aria-label="Facebook" class="transition hover:text-accent-200"><i class="fa-brands fa-facebook-f"></i></a>
-          </div>
-          <p>Design by <span class="underline underline-offset-4">JayintopStudio</span></p>
-        </div>
+        </main>
       </div>
-    </footer>
-
-    
-
-    <!-- Video Modal - FIRST -->
-    <div id="videoModal-first" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
-      <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <video id="modalVideo-first" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
-        <source src="assets/testimonial/first.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <!-- Video Modal - FIRST -->
-    <div id="videoModal-second" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
-      <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <video id="modalVideo-second" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
-        <source src="assets/testimonial/second.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <!-- Video Modal - FIRST -->
-    <div id="videoModal-third" class="fixed inset-0 z-[9999] hidden bg-black/90 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
-      <button class="closeModalBtn fixed right-6 top-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-2xl text-slate-900" aria-label="Close video" title="Close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <video id="modalVideo-third" class="w-full h-[75vh] sm:h-[80vh] max-h-[80vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl mx-auto rounded-3xl shadow-2xl object-contain ring-2 ring-white/20" controls preload="metadata" playsinline>
-        <source src="assets/testimonial/third.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    </main>    
 
     <script>
 
@@ -1535,6 +855,25 @@ class="h-80 sm:h-[450px] md:h-[500px] lg:h-[540px] w-full object-cover object-ce
           btn.onclick = () => scrollCarousel(btn, 'prev');
         });
       });
+
+      document.querySelectorAll('.accordion-item button').forEach(button => {
+        button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const minusIcon = button.querySelector('.minus-icon');
+        const plusIcon = button.querySelector('.plus-icon');
+
+        // Toggle content height
+        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+            content.style.maxHeight = '0px';
+            minusIcon.classList.replace('opacity-100', 'opacity-0');
+            plusIcon.classList.replace('opacity-0', 'opacity-100');
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            minusIcon.classList.replace('opacity-0', 'opacity-100');
+            plusIcon.classList.replace('opacity-100', 'opacity-0');
+        }
+        });
+    });
     </script>
   </body>
 </html>
