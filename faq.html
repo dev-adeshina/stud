@@ -113,6 +113,28 @@
           @apply font-inter text-[#94A3B8] font-normal text-[14px] leading-[22.75px] tracking-[0px];
         }
 
+        .hero-breadcrumb {
+          @apply font-inter font-semibold text-[16px] text-[#E2C065] leading-[24px] mb-[24px] tracking-[0px];
+
+        }
+
+        .hero-paragraph {
+          @apply font-inter font-normal text-[18px] lg:text-[20px] text-[#FFFFFF] opacity-60 leading-[28px] lg:leading-[30px] mb-[18px] lg:mb-[20px] tracking-[0px];
+        }
+
+        .hero-title {
+          @apply font-inter font-semibold text-[36px] lg:text-[48px] text-[#FFFFFF] leading-[44px] lg:leading-[60px] mb-[36px] lg:mb-[48px] tracking-[-0.02em];
+        }
+
+        .faq-title {
+          @apply font-inter font-semibold text-[16px] leading-[24px] mb-[16px] tracking-[0px] text-[#181D27];
+        }
+
+        .faq-paragraph {
+          @apply font-inter font-normal text-[16px] leading-[24px] mb-[16px] tracking-[0px] text-[#535862];
+        }
+
+
         .shell {
           @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-0;
         }
@@ -523,27 +545,33 @@
         <div class="grid grid-cols-1 items-center gap-12 py-16">
             <div class="w-full">
                 <div
-                    class="mb-6 inline-flex items-center gap-2 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.28em] text-accent-200"
+                    class="hero-breadcrumb"
                     >
-                    Faq
+                    Frequently Asked Questions
                 </div>
-                <div class="md:flex">
-                    <div class="">
-                        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-[-0.02em] text-white md:leading-[1.1] lg:leading-[1.15]">
-                                Frequently asked questions
-                        </h1>
-                        <p class="mt-2 text-gray-500">
-                            Everything you need to know about the product and billing.
-                        </p>
-                    </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="order-1">
+                    <h1 class="hero-title">
+                            What services does StudyGlide Educational Consult provide?
+                    </h1>
+                    
+                </div>
+                <div class="order-2">
+                    
+                    <p class="hero-paragraph">
+                        StudyGlide Educational Consult helps students achieve their dream of studying abroad. 
+                        Our services include university selection, application processing, admission guidance, 
+                        visa assistance, scholarship guidance, interview preparation, and pre-departure support.
+                    </p>
                 </div>
             </div>
       </div>
-
+      <div class="absolute -bottom-px right-0 h-20 w-28 bg-white [clip-path:polygon(100%_0,0_100%,100%_100%)]"></div>
     </section>
 
-    <main class="border border-green-700">
-      <div id="mission-statement" class="shell border border-slate-700">
+    <main>
+      <div id="mission-statement" class="shell py-16">
 
 
 
@@ -552,9 +580,9 @@
                 
                 <div class="accordion-item py-4">
                     <button class="flex w-full items-center justify-between text-left focus:outline-none group">
-                        <span class="text-sm font-semibold text-gray-800 transition-colors group-hover:text-blue-600">
+                        <h1 class="faq-title">
                         What services does Studyglide Educational Consult provide?
-                        </span>
+                        </h1>
                         <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
                         <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -566,17 +594,19 @@
                     </button>
                 
                     <div class="accordion-content max-h-screen overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="mt-3 text-xs leading-relaxed text-gray-500">
-                        Studyglide Educational Consult helps students achieve their dream of studying abroad. Our services include university selection, application processing, admission guidance, visa assistance, scholarship guidance, interview preparation, and pre-departure support.
+                        <p class="faq-paragraph">
+                          Studyglide Educational Consult helps students achieve their dream of studying abroad. Our
+                          services include university selection, application processing, admission guidance, visa
+                          assistance, scholarship guidance, interview preparation, and pre-departure support.
                         </p>
                     </div>
                 </div>
 
                 <div class="accordion-item py-4">
                     <button class="flex w-full items-center justify-between text-left focus:outline-none group">
-                        <span class="text-sm font-semibold text-gray-800 transition-colors group-hover:text-blue-600">
+                        <h1 class="faq-title">
                         Which countries can I apply to through Studyglide?
-                        </span>
+                        </h1>
                         <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
                         <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -588,8 +618,320 @@
                     </button>
                 
                     <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="mt-3 text-xs leading-relaxed text-gray-500">
-                        We assist students with admissions to universities in countries such as the United Kingdom, Canada, United States, Australia, Ireland, and some European countries.
+                        <p class="faq-paragraph">
+                          We assist students with admissions to universities in countries such as the United Kingdom,
+                          Canada, United States, Australia, Ireland, and some European countries depending on the
+                          student’s academic background and preferences.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          How much does it cost to study abroad?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          The cost depends on the country, university, and course. On average:
+                          <ul class="list-disc text-[#000000]">
+                            <li>
+                              UK tuition fees: £11,500 – £20,000 per year
+                            </li>
+                            <li>
+                              Living expenses: £10,539 – £13,761 per year
+                            </li>
+                          </ul>
+                          We help students find affordable universities and flexible payment options.
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          Can I study abroad with low grades?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                            Yes. Many universities consider students with average grades. We help identify universities that
+                            match your academic profile and improve your chances of admission.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          Do I need IELTS or other English tests?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          Some universities require English tests such as IELTS, TOEFL, or PTE Academic. However, some
+                          universities offer IELTS waivers depending on your previous education.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          Can Studyglide help me get scholarships?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                            Yes. We guide students on available scholarships and university discounts that can reduce
+                            tuition fees
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          How long does the admission process take?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          Admissions typically take 1–6 weeks, depending on the university and the completeness of your documents.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          What documents are required to apply?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          Common documents include:
+                          <ul class="list-disc text-[#000000]">
+                            <li>
+                              International passport
+                            </li>
+                            <li>
+                              Academic transcripts and certificates
+                            </li>
+                            <li>
+                              Personal statement
+                            </li>
+                            <li>
+                              Curriculum Vitae (CV)
+                            </li>
+                            <li>
+                              English test results (if required)
+                            </li>
+                          </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          Can I work while studying abroad?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          Some countries offer post-study work visas. For example, the **UK Graduate Route allows
+                          international students to stay and work for 2 years after completing their degree.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          How long does the visa process take?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          Visa processing usually takes 1–6 weeks, depending on the country and embassy requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          What happens if my visa is refused?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          If a visa refusal occurs, Studyglide will help review the reasons and guide you on reapplication or alternative options.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          Do I need to pay the full tuition fee before travelling?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          Most universities require a tuition deposit before issuing the final documents for visa
+                          application
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          When should I start my study abroad application?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          It is best to start your application 4–9 months before your intended intake to allow enough
+                          time for admission and visa processing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item py-4">
+                    <button class="flex w-full items-center justify-between text-left focus:outline-none group">
+                        <h1 class="faq-title">
+                          How do I start my study abroad application with Studyglide?
+                        </h1>
+                        <div class="relative w-5 h-5 flex-shrink-0 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-0 minus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 transition-opacity duration-300 opacity-100 plus-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        </div>
+                    </button>
+                
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="faq-paragraph">
+                          You can begin by contacting Studyglide Educational Consult through:
+                          <ul class="list-disc text-[#000000]">
+                            <li>
+                              WhatsApp
+                            </li>
+                            <li>
+                              Email
+                            </li>
+                            <li>
+                              Online consultation
+                            </li>
+                          </ul>
+                          Our team will guide you through the entire process step-by-step.
                         </p>
                     </div>
                 </div>
@@ -613,14 +955,32 @@
                 Can't find the answer you're looking for? Please chat to our friendly team.
             </p>
 
-            <a href="#" class="inline-flex items-center gap-2 rounded-lg bg-[#1a4747] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#133535] focus:ring-2 focus:ring-offset-2 focus:ring-[#1a4747]">
-                Contact Support
-                <span class="flex h-5 w-5 items-center justify-center rounded bg-[#d9b874] text-[#1a4747]">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-3 w-3">
-                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
-                </svg>
+            <button type="submit"  class="secondary-pixel-anchor group relative inline-flex items-center h-11 justify-between  px-1 overflow-hidden bg-[#16484B] border border-white/20 rounded-[5px] no-underline transition-all duration-300 hover:border-white/40">
+        
+                <div  class="secondary-pixel-grid absolute inset-0 grid pointer-events-none">
+                  </div>
+
+                <span class="relative z-10 anchor-text text-[#E2C065] transition-colors duration-500 group-hover:text-[#16484B]">
+                  Contact Support
                 </span>
-            </a>
+
+                <div class="relative z-10 flex items-center justify-center w-8 h-8 ml-4 bg-[#E2C065] rounded-[5px] transition-all duration-500 group-hover:bg-[#16484B] hover:-translate-y-1 hover:scale-110">
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    class="w-5 h-5 text-[#16484B] transition-transform duration-500 group-hover:text-[#E2C065]" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2.5" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+                
+            </button>
 
         </section>
       </div> 
